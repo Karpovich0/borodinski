@@ -1,0 +1,14 @@
+.header {
+  height: 100vh;
+  background-color: red;
+}
+
+body {
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+}
