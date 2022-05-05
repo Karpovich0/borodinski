@@ -1,2 +1,17 @@
+:root {
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --color-dark-gray: #292929;
+    --color-medium-gray: #4A4A4A;
+    --color-light-gray: #E5DDD5;
+    --color-gray: #353535;
+    --color-creamy: #F8F5F2;
+}
+
+@import 'general';
 @import 'blocks/header';
-@import 'global';
+@import 'blocks/intro';
+@import 'blocks/advantages';
+@import 'blocks/news';
+@import 'blocks/reviews';
+@import 'blocks/footer';

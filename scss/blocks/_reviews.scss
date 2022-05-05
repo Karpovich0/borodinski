@@ -1,0 +1,73 @@
+.reviews {
+    background-color: var(--color-creamy);
+    &__content {}
+    &__slider {
+        margin-bottom: 42px;
+        display: grid;
+        grid-template-columns: 50px 1fr 50px;
+        column-gap: 20px;
+    }
+    &__button {
+        background-color: transparent;
+        background: url(../../img/reviews/arrow.svg) no-repeat center center;
+        border: 1px solid var(--color-light-gray);
+        cursor: pointer;
+        &--back {
+            order: -2;
+        }
+        &--forward {
+            transform: rotate(180deg);
+        }
+    }
+    &__slider-inner {}
+    &__box {
+        display: flex;
+    }
+    &__img {}
+    &__details {
+        padding: 15px 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid var(--color-light-gray);
+        border-left: none;
+    }
+    &__author {
+        margin-bottom: 12px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 27px;
+        color: var(--color-black);
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: var(--color-black);
+    }
+    &__list-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+    }
+    &__item {
+        margin-right: 23px;
+        transform: rotate(45deg);
+        button {
+            padding: 0;
+            width: 10px;
+            height: 10px;
+            border: 1px solid var(--color-gray);
+            background-color: transparent;
+            cursor: pointer;
+        }
+        &--active {
+            button {
+                background-color: var(--color-gray);
+            }
+        }
+    }
+}

@@ -1,4 +1,49 @@
 .header {
-    height: 100vh;
-    background-color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--color-white);
+    background-color: var(--color-black);
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__list {
+        display: flex;
+    }
+    &__item {
+        padding: 24px 0;
+        margin-right: 65px;
+        &:last-child {
+            margin-right: none;
+        }
+    }
+    &__link {}
+    &__button-wrapepr {}
+    &__button {
+        display: flex;
+        align-items: center;
+        padding: 24px 0;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        color: var(--color-white);
+        background-color: transparent;
+        border: none;
+        &::before {
+            content: "";
+            margin-right: 9px;
+            position: relative;
+            width: 16px;
+            height: 16px;
+            background-image: url("../../img/header/login-icon.svg");
+            background-position: 0 0;
+            background-repeat: no-repeat;
+        }
+    }
 }
