@@ -23,42 +23,81 @@
     <header class="header">
         <div class="container">
             <nav class="header__nav">
-                <!-- <a href="" class="logo-link logo-link--header"><img src="" alt="" class="logo-img logo-img--header"></a> -->
-                <ul class="header__list">
-                    <li class="header__item">
-                        <a href="" class="header__link">ГЛАВНАЯ</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="" class="header__link">НАШИ РАБОТЫ</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="" class="header__link">ЗАПИСАТЬСЯ</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="" class="header__link">КОНТАКТЫ</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="" class="header__link">HTML ACADEMY</a>
-                    </li>
-                </ul>
-                <div class="header__button-wrapepr">
-                    <button class="header__button">
+                <div class="logo-wrapper logo-wrapper--mobile">
+                    <a href="" class="logo"><img src="/img/logo/pc.svg" alt="" class="logo-img" width="370" height="153"></a>
+                </div>
+                <div class="header__list-wrapepr">
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="" class="header__link">ГЛАВНАЯ</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="" class="header__link">НАШИ РАБОТЫ</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="" class="header__link">ЗАПИСАТЬСЯ</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="" class="header__link">КОНТАКТЫ</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="" class="header__link">HTML ACADEMY</a>
+                        </li>
+                    </ul>
+                    <div class="header__button-wrapepr">
+                        <button class="header__button">
                     ВОЙТИ
                     </button>
+                    </div>
                 </div>
             </nav>
         </div>
     </header>
     <main class="main-index-page">
         <section class="intro">
-            <a href="" class="logo-link logo-link--intro"><img src="" alt="" class="logo-img logo-img--intro"></a>
+            <div class="logo-wrapper logo-wrapper--tablet-and-pc">
+                <a href="" class="logo"><img src="/img/logo/pc.svg" alt="" class="logo-img" width="370" height="153"></a>
+            </div>
         </section>
         <!-- END intro -->
         <section class="stats">
+            <h2 class="visually-hidden">Немного статистики</h2>
             <div class="stats__inner">
-
+                <div class="stats__header">
+                    <p class="stats__title">Стрижка у нас это выгодно!</p>
+                    <p class="stats__subtitle">Мужская стрижка требует<br> точного подхода. Обратимся<br> к статистике:</p>
+                    <p class="stats__legend-explanation stats__legend-explanation--top">* — приведённые данные ложь</p>
+                </div>
+                <ul class="stats__list">
+                    <li class="stats__item">
+                        <dl class="stats__definition-list">
+                            <dt class="stats__number">1500*</dt>
+                            <dd class="stats__description">рублей вложений</dd>
+                        </dl>
+                    </li>
+                    <li class="stats__item">
+                        <dl class="stats__definition-list">
+                            <dt class="stats__number">7 200</dt>
+                            <dd class="stats__description">секунд времени мастера</dd>
+                        </dl>
+                    </li>
+                    <li class="stats__item">
+                        <dl class="stats__definition-list">
+                            <dt class="stats__number">90 000</dt>
+                            <dd class="stats__description">постриженных волос</dd>
+                        </dl>
+                    </li>
+                    <li class="stats__item">
+                        <dl class="stats__definition-list">
+                            <dt class="stats__number">500 000*</dt>
+                            <dd class="stats__description">лайков и комплиментов</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <p class="stats__legend-explanation stats__legend-explanation--bottom">* — приведённые данные ложь</p>
             </div>
         </section>
+        <!-- END stats -->
         <section class="advantages">
             <h2 class="visually-hidden">Наши преимущества</h2>
             <ul class="advantages__list">
@@ -85,7 +124,7 @@
                 </li>
             </ul>
             <div class="advantages__decorative-triangles">
-                <img class="advantages__img" src="/img/advantages/triangles.png" alt="" height="68">
+                <!-- <img class="advantages__img" src="/img/advantages/decoratice-triangles.svg" alt="" height="68"> -->
             </div>
         </section>
         <!-- END advantages -->

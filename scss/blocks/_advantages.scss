@@ -48,7 +48,10 @@
         text-align: center;
     }
     &__decorative-triangles {
+        height: 68px;
         background-color: var(--color-gray);
+        background: url(../../img/advantages/decoratice-triangles.svg) no-repeat 0 0;
+        background-size: 100% 100%;
     }
     &__img {
         width: 100%;

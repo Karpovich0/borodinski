@@ -16,6 +16,22 @@ body {
     max-width: 1000px;
 }
 
+.logo-wrapper {
+    padding-top: 129px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-wrapper--mobile {
+    display: none;
+}
+
+.logo-wrapper--tablet-and-pc {}
+
+.logo {}
+
+.logo-img {}
+
 .button {
     width: 100%;
     min-width: 160px;
