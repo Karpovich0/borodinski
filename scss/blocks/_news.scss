@@ -11,11 +11,19 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 46px;
+        @media (max-width: $width-tablet-wide) {
+            grid-template-columns: 1fr 1fr;
+        }
     }
     &__item {
         display: grid;
         grid-template-columns: auto 1fr;
         grid-column-gap: 21px;
+        @media (max-width: $width-tablet-wide) {
+            &--third {
+                display: none;
+            }
+        }
     }
     &__time {
         display: flex;

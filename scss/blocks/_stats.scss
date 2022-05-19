@@ -1,75 +1,102 @@
-.stats {
-    margin-bottom: -114px;
-    background-color: var(--color-gray);
-    &__inner {
-        position: relative;
-        bottom: 161px;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
+    .stats {
+        margin-bottom: -114px;
         background-color: var(--color-gray);
-        margin: 0 auto;
-        width: 100%;
-        max-width: 960px;
-    }
-    &__header {
-        padding: 32px 34px 30px;
-        background-color: var(--color-white);
-        color: var(--color-black);
-    }
-    &__title {
-        margin-bottom: 38px;
-        font-weight: 700;
-        font-size: 40px;
-        line-height: 40px;
-    }
-    &__subtitle {
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 27px;
-    }
-    &__legend-explanation {
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 27px;
-        color: var(--color-black);
-        opacity: 0.3;
-    }
-    &__legend-explanation--top {
-        margin-top: 34px;
-    }
-    &__list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        color: var(--color-white);
-    }
-    &__item {
-        padding: 25px 15px 30px;
-        display: flex;
-        justify-content: center;
-        &:nth-child(1) {
-            background-color: rgba($color: #ffffff, $alpha: 0.05);
+        &__inner-wrapper {}
+        &__inner {
+            position: relative;
+            bottom: 161px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            background-color: var(--color-gray);
+            &::before {
+                content: "";
+                position: absolute;
+                top: 37px;
+                left: -20px;
+                width: 23px;
+                height: 23px;
+                background: url(../../img/stats/triangle.svg) no-repeat 0 0;
+            }
+            @media (max-width: $width-tablet-wide) {
+                grid-template-columns: 1fr 1fr;
+                bottom: 187px;
+            }
         }
-        &:nth-child(2) {
-            background-color: rgba($color: #ffffff, $alpha: 0.12);
+        &__header {
+            padding: 32px 0 30px;
+            background-color: var(--color-white);
+            color: var(--color-black);
+            @media (max-width: $width-tablet-wide) {
+                grid-column: 1/-1;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
         }
-        &:nth-child(3) {}
-        &:nth-child(4) {
-            background-color: rgba($color: #ffffff, $alpha: 0.05);
+        &__title {
+            margin-bottom: 38px;
+            padding: 0 34px;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 40px;
+            @media (max-width: $width-tablet-wide) {
+                margin-bottom: 0;
+            }
+        }
+        &__subtitle {
+            padding: 0 34px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+        }
+        &__legend-explanation {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+            color: var(--color-black);
+            opacity: 0.3;
+        }
+        &__legend-explanation--top {
+            padding: 0 34px;
+            margin-top: 34px;
+            @media (max-width: $width-tablet-wide) {
+                margin-top: 24px;
+                line-height: 1;
+            }
+        }
+        &__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            color: var(--color-white);
+            @media (max-width: $width-tablet-wide) {
+                grid-column: 1/-1;
+            }
+        }
+        &__item {
+            padding: 25px 14px 30px 34px;
+            &:nth-child(1) {
+                background-color: rgba($color: #ffffff, $alpha: 0.05);
+            }
+            &:nth-child(2) {
+                background-color: rgba($color: #ffffff, $alpha: 0.12);
+            }
+            &:nth-child(3) {}
+            &:nth-child(4) {
+                background-color: rgba($color: #ffffff, $alpha: 0.05);
+            }
+        }
+        &__definition-list {}
+        &__number {
+            margin-bottom: 7px;
+            font-weight: 700;
+            font-size: 72px;
+            line-height: 72px;
+        }
+        &__description {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 20px;
+        }
+        &__legend-explanation--bottom {
+            display: none;
         }
     }
-    &__definition-list {}
-    &__number {
-        margin-bottom: 7px;
-        font-weight: 700;
-        font-size: 72px;
-        line-height: 72px;
-    }
-    &__description {
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 20px;
-    }
-    &__legend-explanation--bottom {
-        display: none;
-    }
-}
