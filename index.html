@@ -23,10 +23,13 @@
     <header class="header">
         <div class="container">
             <nav class="header__nav">
+                <div class="header__btn-toggle-wrapper"><button class="header__btn-toggle"><span class="visually-hidden">Открить меню</span></button></div>
                 <div class="logo-wrapper logo-wrapper--mobile">
-                    <a href="" class="logo"><img src="/img/logo/pc.svg" alt="" class="logo-img" width="370" height="153"></a>
+                    <a href="" class="logo">
+                        <img src="/img/logo/mobile.svg" alt="" class="logo-img" sizes="226px">
+                    </a>
                 </div>
-                <div class="header__list-wrapepr">
+                <div class="header__list-wrapper">
                     <ul class="header__list">
                         <li class="header__item">
                             <a href="" class="header__link">ГЛАВНАЯ</a>
@@ -44,7 +47,7 @@
                             <a href="" class="header__link">HTML ACADEMY</a>
                         </li>
                     </ul>
-                    <div class="header__button-wrapepr">
+                    <div class="header__button-wrapper">
                         <button class="header__button" aria-label="ВОЙТИ">
                             <span class="header__button-text">ВОЙТИ</span>                  
                     </button>
@@ -57,7 +60,12 @@
         <h1 class="visually-hidden">Барбершоп Бородинский</h1>
         <div class="intro">
             <div class="logo-wrapper logo-wrapper--tablet-and-pc">
-                <a href="" class="logo"><img src="/img/logo/pc.svg" alt="" class="logo-img" width="370" height="153"></a>
+                <a href="" class="logo">
+                    <picture>
+                        <source media="(max-width:1005px)" srcset="/img/logo/tablet.svg 370w" sizes="370px" type="image/svg+xml">
+                        <img src="/img/logo/pc.svg" alt="" class="logo-img" sizes="370px">
+                    </picture>
+                </a>
             </div>
         </div>
         <!-- END intro -->
@@ -67,7 +75,7 @@
                 <div class="stats__inner">
                     <div class="stats__header">
                         <p class="stats__title">Стрижка у нас<br>это выгодно!</p>
-                        <p class="stats__subtitle">Мужская стрижка требует<br> точного подхода. Обратимся<br> к статистике:</p>
+                        <p class="stats__subtitle">Мужская стрижка требует<br class="stats__subtitle-br"> точного подхода. Обратимся<br class="stats__subtitle-br"> к статистике:</p>
                         <p class="stats__legend-explanation stats__legend-explanation--top">* — приведённые данные ложь</p>
                     </div>
                     <ul class="stats__list">
@@ -80,7 +88,9 @@
                         <li class="stats__item">
                             <dl class="stats__definition-list">
                                 <dt class="stats__number">7 200</dt>
-                                <dd class="stats__description">секунд времени мастера</dd>
+                                <dd class="stats__description">секунд
+                                    <nobr>времени мастера</nobr>
+                                </dd>
                             </dl>
                         </li>
                         <li class="stats__item">
@@ -92,7 +102,8 @@
                         <li class="stats__item">
                             <dl class="stats__definition-list">
                                 <dt class="stats__number">500 000*</dt>
-                                <dd class="stats__description">лайков и комплиментов</dd>
+                                <dd class="stats__description">
+                                    <nobr>лайков и</nobr> комплиментов</dd>
                             </dl>
                         </li>
                     </ul>
@@ -132,8 +143,14 @@
                     </div>
                 </li>
             </ul>
-            <div class="advantages__decorative-triangles">
-
+            <div class="slider-navigator slider-navigator--advantages">
+                <ul class="slider-navigator__list">
+                    <li class="slider-navigator__item slider-navigator__item--active"><button class="slider-navigator__button slider-navigator__button--white slider-navigator__button--active"><span class="visually-hidden">1</span></button></li>
+                    <li class="slider-navigator__item"><button class="slider-navigator__button slider-navigator__button--white"><span class="visually-hidden">2</span></button></li>
+                    <li class="slider-navigator__item"><button class="slider-navigator__button slider-navigator__button--white"><span class="visually-hidden">3</span></button></li>
+                </ul>
+            </div>
+            <div class="decorative-triangle">
             </div>
         </section>
         <!-- END advantages -->
@@ -167,7 +184,7 @@
         <!-- END news -->
         <section class="reviews">
             <div class="container">
-                <div class="section-inner">
+                <div class="section-inner section-inner--reviews">
                     <h2 class="section-title">ОТЗЫВЫ О НАС</h2>
                     <div class="">
                         <button class="button">ОСТАВИТЬ СВОЙ</button>
@@ -176,7 +193,11 @@
                         <div class="reviews__slider">
                             <div class="reviews__slider-inner">
                                 <div class="reviews__box">
-                                    <img src="/img/reviews/author-1.jpg" alt="" class="reviews__img" width="249" height="160">
+                                    <picture class="reviews__picture">
+                                        <source media="(max-width:768px)" srcset="/img/reviews/author-1-50.jpg 50w" sizes="50">
+                                        <source media="(max-width:1006px)" srcset="/img/reviews/author-1-80.jpg 80w" sizes="80">
+                                        <img src="/img/reviews/author-1.jpg" alt="" class="reviews__img">
+                                    </picture>
                                     <div class="reviews__details">
                                         <h3 class="reviews__author">Трэвис Баркер</h3>
                                         <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
@@ -186,15 +207,17 @@
                             <button class="reviews__button reviews__button--back"><span class="visually-hidden">Назад</span></button>
                             <button class="reviews__button reviews__button--forward"><span class="visually-hidden">Вперед</span></button>
                         </div>
-                        <div class="reviews__list-wrapper">
-                            <ul class="reviews__list">
-                                <li class="reviews__item reviews__item--active"><button><span class="visually-hidden">1</span></button></li>
-                                <li class="reviews__item"><button><span class="visually-hidden">2</span></button></li>
-                                <li class="reviews__item"><button><span class="visually-hidden">3</span></button></li>
+                        <div class="slider-navigator">
+                            <ul class="slider-navigator__list">
+                                <li class="slider-navigator__item slider-navigator__item--active"><button class="slider-navigator__button slider-navigator__button--active"><span class="visually-hidden">1</span></button></li>
+                                <li class="slider-navigator__item"><button class="slider-navigator__button"><span class="visually-hidden">2</span></button></li>
+                                <li class="slider-navigator__item"><button class="slider-navigator__button"><span class="visually-hidden">3</span></button></li>
                             </ul>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="decorative-triangle decorative-triangle--dark">
             </div>
         </section>
         <!-- END reviews -->
@@ -207,7 +230,7 @@
                     <p class="footer__section-title footer__section-title--address">Барбершоп Бородинский</p>
                     <div class="footer__content">
                         <address class="footer__address">г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
-                            <a href="tel:+78125556666" class="footer__tel">Тел.: +7 (812) 555-66-66</a></address>
+                            <a href="tel:+78125556666" class="footer__tel"><span class="footer__address-tel">Тел.: </span>+7 (812) 555-66-66</a></address>
                     </div>
                 </section>
                 <section class="footer__section footer__section--social">
@@ -237,9 +260,9 @@
                 </section>
                 <section class="footer__section footer__section--developed">
                     <h2 class="visually-hidden"></h2>
-                    <div class="">
+                    <div class="footer__content-wrapper">
                         <p class="footer__section-title">Разработано:</p>
-                        <div class="footer__content"><button class="button button--dark">HTML ACADEMY</button></div>
+                        <div class="footer__content"><button class="button button--dark button--footer">HTML ACADEMY</button></div>
                     </div>
                 </section>
             </div>

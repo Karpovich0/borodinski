@@ -1,7 +1,13 @@
 .intro {
-    height: 82vh;
+    height: 720px;
     min-height: 500px;
     background-color: var(--color-black);
     background: url(../../img/intro/intro-bg.jpg) no-repeat center center;
     background-size: cover;
+    @media (max-width: $width-tablet-wide) {
+        height: 469px;
+    }
+    @media (max-width: $width-tablet) {
+        display: none;
+    }
 }

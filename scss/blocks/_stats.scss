@@ -1,6 +1,10 @@
     .stats {
         margin-bottom: -114px;
         background-color: var(--color-gray);
+        @media (max-width: $width-tablet) {
+            padding-top: 135px;
+            margin-bottom: 0;
+        }
         &__inner-wrapper {}
         &__inner {
             position: relative;
@@ -21,6 +25,12 @@
                 grid-template-columns: 1fr 1fr;
                 bottom: 187px;
             }
+            @media (max-width: $width-tablet) {
+                position: static;
+                margin: 0 -20px;
+                grid-template-columns: 1fr;
+                bottom: 187px;
+            }
         }
         &__header {
             padding: 32px 0 30px;
@@ -30,6 +40,10 @@
                 grid-column: 1/-1;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
+            }
+            @media (max-width: $width-tablet) {
+                padding: 28px 20px;
+                display: block;
             }
         }
         &__title {
@@ -41,26 +55,56 @@
             @media (max-width: $width-tablet-wide) {
                 margin-bottom: 0;
             }
+            @media(max-width:$width-tablet) {
+                margin-bottom: 13px;
+                padding: 0;
+                font-size: 30px;
+                line-height: 30px;
+                text-transform: uppercase;
+                text-align: center;
+            }
         }
         &__subtitle {
             padding: 0 34px;
             font-weight: 400;
             font-size: 20px;
             line-height: 27px;
+            @media(max-width: $width-tablet) {
+                padding: 0;
+                text-align: center;
+            }
+        }
+        &__subtitle-br {
+            @media(max-width: $width-tablet) {
+                display: none;
+            }
         }
         &__legend-explanation {
             font-weight: 400;
             font-size: 20px;
             line-height: 27px;
-            color: var(--color-black);
+            color: rgba(#ffffff, 0.3);
             opacity: 0.3;
         }
         &__legend-explanation--top {
             padding: 0 34px;
             margin-top: 34px;
+            color: rgba(#000000, 0.3);
             @media (max-width: $width-tablet-wide) {
                 margin-top: 24px;
                 line-height: 1;
+            }
+            @media(max-width: $width-tablet) {
+                display: none;
+            }
+        }
+        &__legend-explanation--bottom {
+            margin-top: 20px;
+            padding: 0;
+            display: none;
+            text-align: center;
+            @media(max-width: $width-tablet) {
+                display: block;
             }
         }
         &__list {
@@ -69,6 +113,9 @@
             color: var(--color-white);
             @media (max-width: $width-tablet-wide) {
                 grid-column: 1/-1;
+            }
+            @media (max-width: $width-tablet) {
+                grid-template-columns: 1fr;
             }
         }
         &__item {
@@ -82,21 +129,39 @@
             &:nth-child(3) {}
             &:nth-child(4) {
                 background-color: rgba($color: #ffffff, $alpha: 0.05);
+                @media(max-width: $width-tablet) {
+                    background-color: rgba($color: #ffffff, $alpha: 0.12);
+                }
+            }
+            @media (max-width: $width-tablet) {
+                padding: 20px;
             }
         }
-        &__definition-list {}
+        &__definition-list {
+            @media(max-width: $width-tablet) {
+                display: grid;
+                grid-template-columns: 1fr min-content;
+            }
+        }
         &__number {
             margin-bottom: 7px;
             font-weight: 700;
             font-size: 72px;
             line-height: 72px;
+            @media(max-width: $width-tablet) {
+                font-size: 40px;
+                line-height: 40px;
+            }
         }
         &__description {
             font-weight: 400;
             font-size: 20px;
             line-height: 20px;
-        }
-        &__legend-explanation--bottom {
-            display: none;
+            @media(max-width: $width-tablet) {
+                font-size: 18px;
+                line-height: 18px;
+                text-align: right;
+                align-self: center;
+            }
         }
     }

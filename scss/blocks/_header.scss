@@ -1,5 +1,5 @@
 .header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -9,13 +9,48 @@
     line-height: 24px;
     color: var(--color-white);
     background-color: var(--color-black);
-    &__nav {}
-    &__list-wrapepr {
+    @media (max-width: $width-tablet) {
+        height: 100vh;
+        background-color: var(--color-brown);
+    }
+    &__nav {
+        @media (max-width: $width-tablet) {
+            margin: 0 -20px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__btn-toggle-wrapper {
+        height: 50px;
+        padding: 16px 17px;
+        display: none;
+        background-color: var(--color-brown);
+        align-self: flex-end;
+        @media (max-width: $width-tablet) {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__btn-toggle {
+        display: block;
+        width: 36px;
+        height: 2px;
+        background-color: var(--color-white);
+        border: none;
+        box-shadow: 0 9px 0 0 #fff, 0 -9px 0 0 #fff;
+    }
+    &__list-wrapper {
         display: flex;
         justify-content: space-between;
+        @media (max-width: $width-tablet) {
+            flex-direction: column;
+        }
     }
     &__list {
         display: flex;
+        @media (max-width: $width-tablet) {
+            flex-direction: column;
+        }
     }
     &__item {
         padding: 24px 0;
@@ -23,9 +58,15 @@
         @media (max-width: $width-tablet-wide) {
             margin-right: 34px;
         }
+        @media (max-width: $width-tablet) {
+            margin-right: 0;
+            padding: 13px 21px;
+            background-color: var(--color-light-brown);
+            box-shadow: inset 0px -1px 0px #71543F, inset 0px 1px 0px #886E5B;
+        }
     }
     &__link {}
-    &__button-wrapepr {}
+    &__button-wrapper {}
     &__button {
         display: flex;
         align-items: center;
@@ -42,14 +83,20 @@
             background-position: 0 0;
             background-repeat: no-repeat;
         }
+        @media(max-width: $width-tablet) {
+            padding: 17px 19px;
+        }
     }
     &__button-text {
         font-weight: 700;
         font-size: 18px;
         line-height: 24px;
         color: var(--color-white);
-        @media (max-width: $width-header-button-text) {
+        @media (max-width: $width-tablet-wide) {
             display: none;
+        }
+        @media (max-width: $width-tablet) {
+            display: block;
         }
     }
 }

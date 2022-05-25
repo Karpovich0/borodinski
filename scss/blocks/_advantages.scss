@@ -1,4 +1,5 @@
 .advantages {
+    position: relative;
     background-color: var(--color-gray);
     &__list {
         padding-top: 30px;
@@ -25,6 +26,9 @@
             background-color: var(--color-white);
             opacity: 0.1;
         }
+        &:last-child::after {
+            content: none;
+        }
         @media (max-width: $width-tablet-wide) {
             grid-template-columns: max-content 1fr;
             padding: 40px 0 35px;
@@ -35,8 +39,17 @@
                 bottom: 0;
             }
         }
-        &:last-child::after {
-            content: none;
+        @media (max-width: $width-tablet) {
+            grid-template-columns: 1fr;
+            &::after {
+                content: none;
+            }
+            &:nth-child(2) {
+                display: none;
+            }
+            &:nth-child(3) {
+                display: none;
+            }
         }
     }
     &__img-wrapper {
@@ -47,6 +60,10 @@
         @media (max-width: $width-tablet-wide) {
             margin-bottom: 0;
             margin-right: 34px;
+        }
+        @media (max-width: $width-tablet) {
+            margin-right: 0;
+            margin-bottom: 31px;
         }
     }
     &__img {}
@@ -62,6 +79,9 @@
             margin-bottom: 12px;
             text-align: left;
         }
+        @media (max-width: $width-tablet) {
+            text-align: center;
+        }
     }
     &__description {
         font-weight: 400;
@@ -70,6 +90,9 @@
         text-align: center;
         @media (max-width: $width-tablet-wide) {
             text-align: left;
+        }
+        @media (max-width: $width-tablet) {
+            text-align: center;
         }
     }
     &__decorative-triangles {
