@@ -12,12 +12,21 @@
     @media (max-width: $width-tablet) {
         height: 100vh;
         background-color: var(--color-brown);
+        &--closed {
+            height: auto;
+        }
     }
     &__nav {
         @media (max-width: $width-tablet) {
             margin: 0 -20px;
             display: flex;
             flex-direction: column;
+        }
+    }
+    &__nav--closed {
+        @media (max-width: $width-tablet) {
+            display: grid;
+            grid-template-columns: 1fr auto;
         }
     }
     &__btn-toggle-wrapper {
@@ -31,13 +40,46 @@
             align-items: center;
         }
     }
+    &__btn-toggle-wrapper--closed {
+        @media (max-width: $width-tablet) {
+            order: 2;
+        }
+    }
     &__btn-toggle {
+        position: relative;
         display: block;
         width: 36px;
         height: 2px;
         background-color: var(--color-white);
         border: none;
-        box-shadow: 0 9px 0 0 #fff, 0 -9px 0 0 #fff;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background-color: var(--color-white);
+            border-radius: 1px;
+        }
+        &::before {
+            top: -9px;
+        }
+        &::after {
+            top: 9px;
+        }
+    }
+    &__btn-toggle--closed {
+        background-color: transparent;
+        &::before {
+            top: 0;
+            transform: rotate(-45deg);
+        }
+        &::after {
+            top: 0;
+            transform: rotate(45deg);
+        }
     }
     &__list-wrapper {
         display: flex;
@@ -53,7 +95,6 @@
         }
     }
     &__item {
-        padding: 24px 0;
         margin-right: 65px;
         @media (max-width: $width-tablet-wide) {
             margin-right: 34px;
@@ -65,8 +106,30 @@
             box-shadow: inset 0px -1px 0px #71543F, inset 0px 1px 0px #886E5B;
         }
     }
-    &__link {}
+    &__item--closed {
+        @media(max-width: $width-tablet) {
+            display: none;
+        }
+    }
+    &__item--closed-current {
+        @media(max-width: $width-tablet) {
+            padding-left: 94px;
+            text-align: center;
+        }
+    }
+    &__link {
+        padding: 24px 0;
+        display: block;
+        @media(max-width: $width-tablet) {
+            padding: 0;
+        }
+    }
     &__button-wrapper {}
+    &__button-wrapper--closed {
+        @media(max-width: $width-tablet) {
+            display: none;
+        }
+    }
     &__button {
         display: flex;
         align-items: center;

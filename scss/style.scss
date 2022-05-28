@@ -11,11 +11,7 @@
     --color-light-brown: #826550;
 }
 
-
-/*so here I am*/
-
 $width-tablet-wide:1006px;
-$width-header-button-text: 794px;
 $width-tablet:768px;
 // import blocks styles
 @import 'general';
@@ -26,3 +22,4 @@ $width-tablet:768px;
 @import 'blocks/news';
 @import 'blocks/reviews';
 @import 'blocks/footer';
+@import 'modal';

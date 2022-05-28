@@ -10,4 +10,7 @@
     @media (max-width: $width-tablet) {
         display: none;
     }
+    &--works {
+        height: 379px;
+    }
 }

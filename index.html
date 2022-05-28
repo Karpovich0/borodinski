@@ -19,35 +19,35 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <header class="header">
+<body class="body">
+    <header class="header header--closed">
         <div class="container">
-            <nav class="header__nav">
-                <div class="header__btn-toggle-wrapper"><button class="header__btn-toggle"><span class="visually-hidden">Открить меню</span></button></div>
-                <div class="logo-wrapper logo-wrapper--mobile">
+            <nav class="header__nav header__nav--closed">
+                <div class="header__btn-toggle-wrapper header__btn-toggle-wrapper--closed"><button class="header__btn-toggle header__btn-toggle--closed"><span class="visually-hidden">Открить меню</span></button></div>
+                <div class="logo-wrapper logo-wrapper--mobile logo-wrapper--closed">
                     <a href="" class="logo">
                         <img src="/img/logo/mobile.svg" alt="" class="logo-img" sizes="226px">
                     </a>
                 </div>
                 <div class="header__list-wrapper">
-                    <ul class="header__list">
-                        <li class="header__item">
-                            <a href="" class="header__link">ГЛАВНАЯ</a>
+                    <ul class="header__list header__list--closed">
+                        <li class="header__item header__item--closed">
+                            <a href="/index.html" class="header__link">ГЛАВНАЯ</a>
                         </li>
-                        <li class="header__item">
-                            <a href="" class="header__link">НАШИ РАБОТЫ</a>
+                        <li class="header__item header__item--closed">
+                            <a href="/works.html" class="header__link">НАШИ РАБОТЫ</a>
                         </li>
-                        <li class="header__item">
-                            <a href="" class="header__link">ЗАПИСАТЬСЯ</a>
+                        <li class="header__item header__item--closed-current">
+                            <a href="" class="header__link ">ЗАПИСАТЬСЯ</a>
                         </li>
-                        <li class="header__item">
+                        <li class="header__item header__item--closed">
                             <a href="" class="header__link">КОНТАКТЫ</a>
                         </li>
-                        <li class="header__item">
+                        <li class="header__item header__item--closed">
                             <a href="" class="header__link">HTML ACADEMY</a>
                         </li>
                     </ul>
-                    <div class="header__button-wrapper">
+                    <div class="header__button-wrapper header__button-wrapper--closed">
                         <button class="header__button" aria-label="ВОЙТИ">
                             <span class="header__button-text">ВОЙТИ</span>                  
                     </button>
@@ -62,7 +62,7 @@
             <div class="logo-wrapper logo-wrapper--tablet-and-pc">
                 <a href="" class="logo">
                     <picture>
-                        <source media="(max-width:1005px)" srcset="/img/logo/tablet.svg 370w" sizes="370px" type="image/svg+xml">
+                        <source media="(max-width:1006px)" srcset="/img/logo/tablet.svg 370w" sizes="370px" type="image/svg+xml">
                         <img src="/img/logo/pc.svg" alt="" class="logo-img" sizes="370px">
                     </picture>
                 </a>
@@ -268,6 +268,29 @@
             </div>
         </div>
     </footer>
+    <section class="modal">
+        <h2 class="modal__title">ЛИЧНЫЙ КАБИНЕТ</h2>
+        <p class="modal__subtext">Введите свой логин и пароль, чтобы войти</p>
+        <form action="" class="modal__form">
+            <div class="modal__input-wrapper modal__input-wrapper--login-email">
+                <input type="text" class="modal__login-email modal__input" placeholder="Логин">
+            </div>
+            <div class="modal__input-wrapper modal__input-wrapper--password">
+                <input type="password" class="modal__password modal__input" placeholder="Пароль">
+            </div>
+            <div class="modal__form-footer">
+                <div class="modal__checkbox-wrapper">
+                    <input class="modal__checkbox" type="checkbox" id="modal-checkbox"><label class="modal__checkbox-label" for="modal-checkbox">Запомните меня</label>
+                </div>
+                <div class="modal__link-wrapper"><a href="" class="modal__link">Я забыл пароль!</a></div>
+            </div>
+            <div class="modal__button-wrapper">
+                <button type="submit" class="modal__submit-button button">ВОЙТИ<span class="modal__submit-button-text"> В ЛИЧНЫЙ КАБИНЕТ</span></button>
+                <button class="modal__button-close"><span class="modal__button-close-text">ЗАКРЫТЬ</span></button>
+            </div>
+        </form>
+
+    </section>
 </body>
 
 </html>
