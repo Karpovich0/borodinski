@@ -2,6 +2,9 @@
         margin-bottom: -114px;
         background-color: var(--color-gray);
         @media (max-width: $width-tablet) {
+            margin-bottom: -214px;
+        }
+        @media (max-width: $width-mobile) {
             padding-top: 135px;
             margin-bottom: 0;
         }
@@ -21,11 +24,11 @@
                 height: 23px;
                 background: url(../../img/stats/triangle.svg) no-repeat 0 0;
             }
-            @media (max-width: $width-tablet-wide) {
+            @media (max-width: $width-tablet) {
                 grid-template-columns: 1fr 1fr;
                 bottom: 187px;
             }
-            @media (max-width: $width-tablet) {
+            @media (max-width: $width-mobile) {
                 position: static;
                 margin: 0 -20px;
                 grid-template-columns: 1fr;
@@ -36,12 +39,12 @@
             padding: 32px 0 30px;
             background-color: var(--color-white);
             color: var(--color-black);
-            @media (max-width: $width-tablet-wide) {
+            @media (max-width: $width-tablet) {
                 grid-column: 1/-1;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
             }
-            @media (max-width: $width-tablet) {
+            @media (max-width: $width-mobile) {
                 padding: 28px 20px;
                 display: block;
             }
@@ -52,10 +55,10 @@
             font-weight: 700;
             font-size: 40px;
             line-height: 40px;
-            @media (max-width: $width-tablet-wide) {
+            @media (max-width: $width-tablet) {
                 margin-bottom: 0;
             }
-            @media(max-width:$width-tablet) {
+            @media(max-width:$width-mobile) {
                 margin-bottom: 13px;
                 padding: 0;
                 font-size: 30px;
@@ -69,13 +72,13 @@
             font-weight: 400;
             font-size: 20px;
             line-height: 27px;
-            @media(max-width: $width-tablet) {
+            @media(max-width: $width-mobile) {
                 padding: 0;
                 text-align: center;
             }
         }
         &__subtitle-br {
-            @media(max-width: $width-tablet) {
+            @media(max-width: $width-mobile) {
                 display: none;
             }
         }
@@ -90,11 +93,11 @@
             padding: 0 34px;
             margin-top: 34px;
             color: rgba(#000000, 0.3);
-            @media (max-width: $width-tablet-wide) {
+            @media (max-width: $width-tablet) {
                 margin-top: 24px;
                 line-height: 1;
             }
-            @media(max-width: $width-tablet) {
+            @media(max-width: $width-mobile) {
                 display: none;
             }
         }
@@ -103,7 +106,7 @@
             padding: 0;
             display: none;
             text-align: center;
-            @media(max-width: $width-tablet) {
+            @media(max-width: $width-mobile) {
                 display: block;
             }
         }
@@ -111,10 +114,10 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             color: var(--color-white);
-            @media (max-width: $width-tablet-wide) {
+            @media (max-width: $width-tablet) {
                 grid-column: 1/-1;
             }
-            @media (max-width: $width-tablet) {
+            @media (max-width: $width-mobile) {
                 grid-template-columns: 1fr;
             }
         }
@@ -129,16 +132,16 @@
             &:nth-child(3) {}
             &:nth-child(4) {
                 background-color: rgba($color: #ffffff, $alpha: 0.05);
-                @media(max-width: $width-tablet) {
+                @media(max-width: $width-mobile) {
                     background-color: rgba($color: #ffffff, $alpha: 0.12);
                 }
             }
-            @media (max-width: $width-tablet) {
+            @media (max-width: $width-mobile) {
                 padding: 20px;
             }
         }
         &__definition-list {
-            @media(max-width: $width-tablet) {
+            @media(max-width: $width-mobile) {
                 display: grid;
                 grid-template-columns: 1fr min-content;
             }
@@ -149,6 +152,10 @@
             font-size: 72px;
             line-height: 72px;
             @media(max-width: $width-tablet) {
+                margin-bottom: 12px;
+            }
+            @media(max-width: $width-mobile) {
+                margin-bottom: 0;
                 font-size: 40px;
                 line-height: 40px;
             }
@@ -157,7 +164,7 @@
             font-weight: 400;
             font-size: 20px;
             line-height: 20px;
-            @media(max-width: $width-tablet) {
+            @media(max-width: $width-mobile) {
                 font-size: 18px;
                 line-height: 18px;
                 text-align: right;

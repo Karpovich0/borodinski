@@ -1,0 +1,31 @@
+.works-header {
+    margin: 54px 0 79px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $width-tablet) {
+        margin-bottom: 38px;
+    }
+    @media (max-width: $width-mobile) {
+        padding-top: 109px;
+        margin-bottom: 32px;
+        justify-content: center;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 1;
+        color: var(--color-black);
+        @media (max-width: $width-mobile) {
+            font-size: 30px;
+        }
+    }
+    &__button-wrapper {
+        @media(max-width: $width-mobile) {
+            display: none;
+        }
+    }
+    &__button {
+        display: block;
+    }
+}

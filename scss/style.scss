@@ -6,14 +6,17 @@
     --color-light-gray: #E5DDD5;
     --color-gray: #353535;
     --color-gray-for-header: #242424;
+    --color-gray-for-table: #727272;
     --color-creamy: #F8F5F2;
     --color-brown: #6A4D38;
     --color-light-brown: #826550;
 }
 
-$width-tablet-wide:1006px;
-$width-tablet:768px;
-// import blocks styles
+$width-tablet:1006px;
+$width-mobile:767px;
+$width-pc: 1199px;
+$table-width:630px;
+// import styles
 @import 'general';
 @import 'blocks/header';
 @import 'blocks/intro';
@@ -23,3 +26,6 @@ $width-tablet:768px;
 @import 'blocks/reviews';
 @import 'blocks/footer';
 @import 'modal';
+@import 'works/works-header';
+@import 'works/works-reviews';
+@import 'works/works-prices';

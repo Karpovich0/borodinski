@@ -4,14 +4,14 @@
         position: relative;
     }
     &__slider {
-        margin-bottom: 42px;
+        margin-bottom: 32px;
         display: grid;
         grid-template-columns: 50px 1fr 50px;
         column-gap: 20px;
-        @media (max-width: $width-tablet-wide) {
+        @media (max-width: $width-tablet) {
             column-gap: 0;
         }
-        @media(max-width:$width-tablet) {
+        @media(max-width:$width-mobile) {
             grid-template-columns: 1fr;
             margin-bottom: 32px;
         }
@@ -27,7 +27,7 @@
         &--forward {
             transform: rotate(180deg);
         }
-        @media(max-width:$width-tablet) {
+        @media(max-width:$width-mobile) {
             display: none;
         }
     }
@@ -35,14 +35,14 @@
     &__box {
         display: grid;
         grid-template-columns: 249px 1fr;
-        @media (max-width: $width-tablet-wide) {
+        @media (max-width: $width-tablet) {
             grid-template-columns: 80px 1fr;
             padding: 30px 30px 35px;
             border: 1px solid var(--color-light-gray);
             border-right: 0;
             border-left: 0;
         }
-        @media(max-width:$width-tablet) {
+        @media(max-width:$width-mobile) {
             grid-template-columns: 50px 1fr;
             padding: 0 0 25px;
             border: 0;
@@ -54,13 +54,13 @@
     }
     &__img {
         width: 249px;
-        @media (max-width: $width-tablet-wide) {
+        @media (max-width: $width-tablet) {
             align-self: center;
             width: 80px;
             height: 80px;
             border-radius: 50%;
         }
-        @media(max-width:$width-tablet) {
+        @media(max-width:$width-mobile) {
             align-self: start;
             border-radius: 0;
             object-fit: contain;
@@ -73,9 +73,12 @@
         justify-content: center;
         border: 1px solid var(--color-light-gray);
         border-left: none;
-        @media (max-width: $width-tablet-wide) {
+        @media (max-width: $width-tablet) {
             padding: 0 0 0 30px;
             border: none;
+        }
+        @media (max-width: $width-mobile) {
+            padding-left: 20px;
         }
     }
     &__author {
@@ -94,13 +97,13 @@
     &__list-wrapper {
         display: flex;
         justify-content: center;
-        @media (max-width: $width-tablet-wide) {
+        @media (max-width: $width-tablet) {
             position: absolute;
             bottom: 25px;
             left: 50%;
             transform: translateX(-50%);
         }
-        @media (max-width: $width-tablet) {
+        @media (max-width: $width-mobile) {
             bottom: 18px;
         }
     }

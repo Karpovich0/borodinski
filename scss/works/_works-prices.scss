@@ -1,0 +1,156 @@
+.works-prices {
+    background-color: var(--color-gray);
+    color: var(--color-white);
+    &__inner {
+        padding: 72px 0 83px;
+        @media(max-width: $width-tablet) {
+            padding: 45px 0 55px;
+        }
+        @media(max-width: $width-mobile) {
+            padding: 37px 0 22px;
+        }
+    }
+    &__title {
+        margin-bottom: 55px;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 1;
+        @media(max-width: $width-tablet) {
+            margin-bottom: 47px;
+        }
+        @media(max-width: $width-mobile) {
+            margin-bottom: 8px;
+            font-size: 30px;
+            text-align: center;
+        }
+    }
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        grid-column-gap: 60px;
+        @media(max-width: $width-pc) {
+            grid-template-columns: 1fr;
+            grid-column-gap: 0;
+            grid-row-gap: 9px;
+        }
+        @media(max-width: $width-mobile) {
+            grid-row-gap: 30px;
+        }
+    }
+    &__table-wrapper {
+        height: 100%;
+    }
+    &__table {
+        height: 100%;
+        width: 100%;
+        border-collapse: collapse;
+        @media(max-width: $width-mobile) {
+            margin: 0 auto;
+            width: 280px;
+        }
+    }
+    &__table-row {
+        position: relative;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 27px;
+    }
+    &__table-data {
+        padding: 13px 19px 14px;
+        border: 1px solid var(--color-medium-gray);
+        @media (max-width: $width-tablet) {
+            padding: 13px 10px 14px;
+        }
+        @media (max-width: $width-mobile) {
+            border: 0;
+            padding: 13px 0 28px;
+        }
+    }
+    &__table-data--number {
+        width: 72px/$table-width*100%;
+        text-align: center;
+        color: var(--color-gray-for-table);
+        @media (max-width: $width-mobile) {
+            display: none;
+        }
+    }
+    &__table-data--name {
+        width: 249px/$table-width*100%;
+        font-weight: 700;
+        @media (max-width: $width-mobile) {
+            width: 200px;
+        }
+    }
+    &__table-data--description {
+        width: 159px/$table-width*100%;
+        @media(max-width: $width-mobile) {
+            position: absolute;
+            left: 0;
+            top: 26px;
+            width: 200px;
+        }
+    }
+    &__table-data--price {
+        @media (max-width: $width-mobile) {
+            width: 73px;
+            text-align: right;
+        }
+    }
+    &__span {
+        display: none;
+        @media (max-width: $width-tablet) {
+            display: inline;
+        }
+    }
+    &__time-wrapper {
+        padding: 35px 64px 24px;
+        border: 1px solid var(--color-medium-gray);
+        @media(max-width: $width-pc) {
+            padding: 21px 20px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+        }
+        @media(max-width: $width-mobile) {
+            padding: 16px 21px;
+        }
+    }
+    &__clock-image {
+        margin-bottom: 25px;
+        @media(max-width: $width-pc) {
+            margin-bottom: 0;
+            width: 72px;
+            height: 71px;
+        }
+        @media(max-width: $width-mobile) {
+            width: 58px;
+            height: 57px;
+        }
+    }
+    &__work-time {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 27px;
+        text-align: center;
+        @media(max-width: $width-pc) {
+            text-transform: uppercase;
+            align-self: center;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 1;
+        }
+        @media(max-width: $width-mobile) {
+            margin-right: 14px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 27px;
+        }
+    }
+    &__time {}
+    &__break-row {
+        @media(max-width: $width-pc) {
+            display: none;
+        }
+    }
+}
+
+.visually-hidden {}

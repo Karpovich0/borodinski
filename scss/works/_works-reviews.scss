@@ -1,0 +1,168 @@
+.works-reviews {
+    margin-bottom: 93px;
+    @media (max-width: $width-tablet) {
+        margin-bottom: 63px;
+    }
+    @media (max-width: $width-mobile) {
+        margin-bottom: 28px;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 39px;
+        @media (max-width: $width-tablet) {
+            gap: 41px;
+            grid-template-columns: 1fr;
+        }
+        @media (max-width: $width-mobile) {
+            gap: 20px;
+        }
+    }
+    &__item {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        @media (max-width: $width-tablet) {
+            grid-template-columns: 270px 1fr;
+            grid-template-rows: auto;
+        }
+        @media (max-width: $width-mobile) {
+            grid-template-columns: 1fr;
+            width: 280px;
+            margin: 0 auto;
+        }
+    }
+    &__item--work-of-month {
+        position: relative;
+        grid-column: 1/-1;
+        grid-template-columns: 1fr 1fr;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 25px;
+            right: 0;
+            width: 176px;
+            height: 50px;
+            background: url(../../img/works/works-reviews/label.svg) 0 0 no-repeat;
+            @media (max-width: $width-tablet) {
+                transform: rotate(180deg);
+                right: auto;
+                left: 0;
+                top: 35px;
+            }
+            @media (max-width: $width-mobile) {
+                top: 400px;
+            }
+        }
+        &::after {
+            content: "РАБОТА МЕСЯЦА";
+            position: absolute;
+            top: 37px;
+            right: 20px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 27px;
+            color: var(--color-white);
+            @media (max-width: $width-tablet) {
+                right: auto;
+                left: 20px;
+                top: 45px;
+            }
+            @media (max-width: $width-mobile) {
+                top: 412px;
+            }
+        }
+        @media (max-width: $width-tablet) {
+            grid-template-columns: 270px 1fr;
+        }
+        @media (max-width: $width-mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__image {
+        width: 294px;
+        height: 294px;
+        object-fit: cover;
+        @media (max-width: $width-tablet) {
+            width: 270px;
+            height: 294px;
+        }
+        @media (max-width: $width-mobile) {
+            width: 280px;
+            height: 176px;
+        }
+    }
+    &__image--work-of-month {
+        width: 480px;
+        height: 480px;
+    }
+    &__content {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        padding: 30px 30px 30px 35px;
+        border: 1px solid var(--color-light-gray);
+        border-top: 0;
+        @media (max-width: $width-tablet) {
+            padding: 46px 70px 40px 50px;
+            border-top: 1px solid var(--color-light-gray);
+            border-left: 0;
+        }
+        @media (max-width: $width-mobile) {
+            padding: 19px 23px 31px;
+            border: 1px solid var(--color-light-gray);
+            border-top: 0;
+        }
+    }
+    &__content--work-of-month {
+        padding: 128px 104px 30px 42px;
+        border-top: 1px solid var(--color-light-gray);
+        border-left: 0;
+        @media (max-width: $width-tablet) {
+            padding: 45px 50px 35px;
+        }
+        @media (max-width: $width-mobile) {
+            padding: 17px 23px 22px;
+            border: 1px solid var(--color-light-gray);
+            border-top: 0;
+        }
+    }
+    &__client-name {
+        margin-bottom: 26px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 27px;
+        @media (max-width: $width-mobile) {
+            margin-bottom: 17px;
+        }
+    }
+    &__client-thoughts {
+        margin-bottom: 28px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        @media (max-width: $width-mobile) {
+            margin-bottom: 23px;
+        }
+    }
+    &__client-thoughts--work-of-month {
+        @media (max-width: $width-mobile) {
+            margin-bottom: 17px;
+        }
+    }
+    &__services-list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 37px;
+        row-gap: 25px;
+        @media (max-width: $width-mobile) {
+            row-gap: 20px;
+        }
+    }
+    &__services-item {
+        display: flex;
+        align-items: center;
+    }
+    &__services-icon {
+        margin-right: 14px;
+    }
+}

@@ -4,13 +4,25 @@
     background-color: var(--color-black);
     background: url(../../img/intro/intro-bg.jpg) no-repeat center center;
     background-size: cover;
-    @media (max-width: $width-tablet-wide) {
-        height: 469px;
-    }
     @media (max-width: $width-tablet) {
+        height: 469px;
+        min-height: auto;
+    }
+    @media (max-width: $width-mobile) {
         display: none;
     }
-    &--works {
-        height: 379px;
+}
+
+.intro--works {
+    min-height: auto;
+    height: 379px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (max-width: $width-tablet) {
+        height: 285px;
+    }
+    @media (max-width: $width-mobile) {
+        display: none;
     }
 }

@@ -6,14 +6,19 @@
         padding-bottom: 38px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        @media (max-width: $width-tablet-wide) {
+        @media (max-width: $width-tablet) {
+            padding-bottom: 10px;
             display: grid;
             grid-template-columns: auto;
+        }
+        @media (max-width: $width-mobile) {
+            padding-top: 0;
         }
     }
     &__item {
         position: relative;
         display: grid;
+        grid-template-rows: min-content 1fr;
         padding: 0 30px;
         color: var(--color-white);
         &::after {
@@ -29,9 +34,9 @@
         &:last-child::after {
             content: none;
         }
-        @media (max-width: $width-tablet-wide) {
+        @media (max-width: $width-tablet) {
             grid-template-columns: max-content 1fr;
-            padding: 40px 0 35px;
+            padding: 40px 0 39px 30px;
             &::after {
                 height: 1px;
                 width: 100%;
@@ -39,7 +44,8 @@
                 bottom: 0;
             }
         }
-        @media (max-width: $width-tablet) {
+        @media (max-width: $width-mobile) {
+            padding: 33px 20px 40px;
             grid-template-columns: 1fr;
             &::after {
                 content: none;
@@ -53,17 +59,19 @@
         }
     }
     &__img-wrapper {
-        margin-bottom: 33px;
+        margin-bottom: 26px;
         height: 95px;
         display: flex;
         justify-content: center;
-        @media (max-width: $width-tablet-wide) {
+        @media (max-width: $width-tablet) {
             margin-bottom: 0;
             margin-right: 34px;
+            padding-top: 5px;
         }
-        @media (max-width: $width-tablet) {
+        @media (max-width: $width-mobile) {
             margin-right: 0;
             margin-bottom: 31px;
+            padding-top: 0;
         }
     }
     &__img {}
@@ -75,11 +83,11 @@
         font-size: 30px;
         line-height: 30px;
         text-align: center;
-        @media (max-width: $width-tablet-wide) {
+        @media (max-width: $width-tablet) {
             margin-bottom: 12px;
             text-align: left;
         }
-        @media (max-width: $width-tablet) {
+        @media (max-width: $width-mobile) {
             text-align: center;
         }
     }
@@ -88,10 +96,10 @@
         font-size: 20px;
         line-height: 27px;
         text-align: center;
-        @media (max-width: $width-tablet-wide) {
+        @media (max-width: $width-tablet) {
             text-align: left;
         }
-        @media (max-width: $width-tablet) {
+        @media (max-width: $width-mobile) {
             text-align: center;
         }
     }
@@ -100,7 +108,7 @@
         background-color: var(--color-gray);
         background: url(../../img/advantages/decoratice-triangles.svg) no-repeat 0 0;
         background-size: 100% 100%;
-        @media (max-width: $width-tablet-wide) {
+        @media (max-width: $width-tablet) {
             height: 40px;
         }
     }

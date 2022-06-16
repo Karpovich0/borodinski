@@ -1,6 +1,8 @@
 .news {
-    padding-top: 13 px;
     background-color: var(--color-creamy);
+    @media (max-width: $width-mobile) {
+        padding-top: 13px;
+    }
     &__inner {
         border-bottom: 1px solid var(--color-light-gray);
     }
@@ -10,11 +12,10 @@
     &__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 46px;
-        @media (max-width: $width-tablet-wide) {
+        @media (max-width: $width-tablet) {
             grid-template-columns: 1fr 1fr;
         }
-        @media (max-width: $width-tablet) {
+        @media (max-width: $width-mobile) {
             grid-template-columns: 1fr;
             grid-column-gap: 20px;
         }
@@ -23,12 +24,12 @@
         display: grid;
         grid-template-columns: auto 1fr;
         grid-column-gap: 21px;
-        @media (max-width: $width-tablet-wide) {
+        @media (max-width: $width-tablet) {
             &--third {
                 display: none;
             }
         }
-        @media (max-width: $width-tablet) {
+        @media (max-width: $width-mobile) {
             &:first-child {
                 padding-bottom: 17px;
                 border-bottom: 1px solid var(--color-light-gray);
@@ -60,9 +61,13 @@
         line-height: 30px;
     }
     &__description {
+        padding-right: 26px;
         font-weight: 400;
         font-size: 18px;
         line-height: 27px;
         color: var(--color-black);
+        @media (max-width: $width-mobile) {
+            padding-right: 5px;
+        }
     }
 }

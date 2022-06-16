@@ -19,13 +19,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="body">
+<body class="body body--works">
     <header class="header header--closed">
         <div class="container">
             <nav class="header__nav header__nav--closed">
                 <div class="header__btn-toggle-wrapper header__btn-toggle-wrapper--closed"><button class="header__btn-toggle header__btn-toggle--closed"><span class="visually-hidden">Открить меню</span></button></div>
                 <div class="logo-wrapper logo-wrapper--mobile logo-wrapper--closed">
-                    <a href="" class="logo">
+                    <a href="index.html" class="logo">
                         <img src="/img/logo/mobile.svg" alt="" class="logo-img" sizes="226px">
                     </a>
                 </div>
@@ -34,11 +34,11 @@
                         <li class="header__item header__item--closed">
                             <a href="/index.html" class="header__link">ГЛАВНАЯ</a>
                         </li>
-                        <li class="header__item header__item--closed">
+                        <li class="header__item header__item--closed-current">
                             <a href="/works.html" class="header__link">НАШИ РАБОТЫ</a>
                         </li>
-                        <li class="header__item header__item--closed-current">
-                            <a href="" class="header__link ">ЗАПИСАТЬСЯ</a>
+                        <li class="header__item header__item--closed">
+                            <a href="/reserve.html" class="header__link ">ЗАПИСАТЬСЯ</a>
                         </li>
                         <li class="header__item header__item--closed">
                             <a href="" class="header__link">КОНТАКТЫ</a>
@@ -56,8 +56,8 @@
             </nav>
         </div>
     </header>
-    <main class="main-works">
-        <h1 class="visually-hidden">Барбершоп Бородинский Галерея</h1>
+    <main class="works-main">
+
         <div class="intro intro--works">
             <div class="logo-wrapper logo-wrapper--tablet-and-pc">
                 <a href="" class="logo">
@@ -67,10 +67,159 @@
                     </picture>
                 </a>
             </div>
+            <div class="decorative-triangle">
+            </div>
         </div>
         <!-- END intro -->
+        <div class="container">
+            <div class="works-header">
+                <h1 class="works-header__title">НАШИ РАБОТЫ</h1>
+                <div class="works-header__button-wrapper">
+                    <a href="/index.html" class="button works-header__button">НА ГЛАВНУЮ</a>
+                </div>
+            </div>
+            <!-- END works-header -->
+            <section class="works-reviews">
+                <h2 class="visually-hidden">Отзывы клиентов</h2>
+                <ul class="works-reviews__list">
+                    <li class="works-reviews__item works-reviews__item--work-of-month">
+                        <picture>
+                            <source media="(max-width:1007px)" srcset="/img/works/works-reviews/photo-1-tablet.jpg 1x, /img/works/works-reviews/photo-1-tablet@2x.jpg 2x">
+                            <img src="/img/works/works-reviews/photo-1-desktop.jpg" alt="" class="works-reviews__image works-reviews__image--work-of-month" srcset="/img/works/works-reviews/photo-1-desktop@2x.jpg 2x">
+                        </picture>
+                        <div class="works-reviews__content works-reviews__content--work-of-month">
+                            <p class="works-reviews__client-name">Лжепётр Мчиславский</p>
+                            <p class="works-reviews__client-thoughts works-reviews__client-thoughts--work-of-month">Где я только не стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!</p>
+                            <ul class="works-reviews__services-list">
+                                <li class="works-reviews__services-item"><img src="/img/works/works-reviews/scissors-icon.svg" alt="" class="works-reviews__services-icon" width="21" height="20">СТРИЖКА</li>
+                                <li class="works-reviews__services-item"><img src="/img/works/works-reviews/beard-icon.svg" alt="" class="works-reviews__services-icon" width="23" height="21">БРИТЬЕ</li>
+                                <li class="works-reviews__services-item"><img src="/img/works/works-reviews/mustache-icon.svg" alt="" class="works-reviews__services-icon" width="45" height="12">УСЫ</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="works-reviews__item">
+                        <picture>
+                            <source media="(max-width:767px)" srcset="/img/works/works-reviews/photo-2-mobile.jpg 1x, /img/works/works-reviews/photo-2-mobile@2x.jpg 2x">
+                            <img src="/img/works/works-reviews/photo-2-desktop.jpg" alt="" class="works-reviews__image" srcset="/img/works/works-reviews/photo-2-desktop@2x.jpg 2x" width="294" height="294">
+                        </picture>
+                        <div class="works-reviews__content">
+                            <p class="works-reviews__client-name">Саша Мальцев</p>
+                            <p class="works-reviews__client-thoughts">Попросил омолодить и омолодили! Кто теперь скажет, что мне 45? </p>
+                            <ul class="works-reviews__services-list">
+                                <li class="works-reviews__services-item"><img src="/img/works/works-reviews/scissors-icon.svg" alt="" class="works-reviews__services-icon" width="21" height="20">СТРИЖКА</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="works-reviews__item">
+                        <picture>
+                            <source media="(max-width:767px)" srcset="/img/works/works-reviews/photo-3-mobile.jpg 1x, /img/works/works-reviews/photo-3-mobile@2x.jpg 2x">
+                            <img src="/img/works/works-reviews/photo-3-desktop.jpg" alt="" class="works-reviews__image" srcset="/img/works/works-reviews/photo-3-desktop@2x.jpg 2x">
+                        </picture>
+                        <div class="works-reviews__content">
+                            <p class="works-reviews__client-name">Владимир Иваныч</p>
+                            <p class="works-reviews__client-thoughts">К зимнему сезону — готов!</p>
+                            <ul class="works-reviews__services-list">
+                                <li class="works-reviews__services-item"><img src="/img/works/works-reviews/beard-icon.svg" alt="" class="works-reviews__services-icon" width="23" height="21">БОРОДА</li>
+                                <li class="works-reviews__services-item"><img src="/img/works/works-reviews/mustache-icon.svg" alt="" class="works-reviews__services-icon" width="45" height="12">УСЫ</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="works-reviews__item">
+                        <picture>
+                            <source media="(max-width:767px)" srcset="/img/works/works-reviews/photo-4-mobile.jpg 1x, /img/works/works-reviews/photo-4-mobile@2x.jpg 2x">
+                            <img src="/img/works/works-reviews/photo-4-desktop.jpg" alt="" class="works-reviews__image" srcset="/img/works/works-reviews/photo-4-desktop@2x.jpg 2x">
+                        </picture>
+                        <div class="works-reviews__content">
+                            <p class="works-reviews__client-name">Винстон Синий</p>
+                            <p class="works-reviews__client-thoughts">Как только зарастаю и волосы начинают мешать видеть — бегом в Бородинский!</p>
+                            <ul class="works-reviews__services-list">
+                                <li class="works-reviews__services-item"><img src="/img/works/works-reviews/scissors-icon.svg" alt="" class="works-reviews__services-icon" width="21" height="20">СТРИЖКА</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <section class="works-prices">
+            <div class="decorative-triangle decorative-triangle--gray decorative-triangle--works-prices-top">
+            </div>
+            <div class="container">
+                <div class="works-prices__inner">
+                    <h2 class="works-prices__title">
+                        ПРЕЙСКУРАНТ
+                    </h2>
+                    <div class="works-prices__content">
+                        <div class="works-prices__table-wrapper">
+                            <table class="works-prices__table">
+                                <thead class="visually-hidden">
+                                    <tr class="works-prices__table-row">
+                                        <th>Номер</th>
+                                        <th>Назва</th>
+                                        <th>Описание</th>
+                                        <th>Цена</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="works-prices__table-row">
+                                        <td class="works-prices__table-data works-prices__table-data--number">1</td>
+                                        <td class="works-prices__table-data works-prices__table-data--name">Классическая стрижка</td>
+                                        <td class="works-prices__table-data works-prices__table-data--description">
+                                            <span class="works-prices__span">(</span>с мытьём головы
+                                            <span class="works-prices__span">)</span>
+                                        </td>
+                                        <td class="works-prices__table-data works-prices__table-data--price">1 500 руб.</td>
+                                    </tr>
+                                    <tr class="works-prices__table-row">
+                                        <td class="works-prices__table-data works-prices__table-data--number">2</td>
+                                        <td class="works-prices__table-data works-prices__table-data--name">Современный вариант</td>
+                                        <td class="works-prices__table-data works-prices__table-data--description">
+                                            <span class="works-prices__span">(</span>с мытьём головы
+                                            <span class="works-prices__span">)</span>
+                                        </td>
+                                        <td class="works-prices__table-data works-prices__table-data--price">1 500 руб.</td>
+                                    </tr>
+                                    <tr class="works-prices__table-row">
+                                        <td class="works-prices__table-data works-prices__table-data--number">3</td>
+                                        <td class="works-prices__table-data works-prices__table-data--name">Индивидуальный подход</td>
+                                        <td class="works-prices__table-data works-prices__table-data--description">
+                                            <span class="works-prices__span">(</span>с мытьём головы
+                                            <span class="works-prices__span">)</span>
+                                        </td>
+                                        <td class="works-prices__table-data works-prices__table-data--price">2 000 руб.</td>
+                                    </tr>
+                                    <tr class="works-prices__table-row">
+                                        <td class="works-prices__table-data works-prices__table-data--number">4</td>
+                                        <td class="works-prices__table-data works-prices__table-data--name">Бритьё бороды</td>
+                                        <td class="works-prices__table-data works-prices__table-data--description"> <span class="works-prices__span">(</span>без мытья <span class="works-prices__span">)</span></td>
+                                        <td class="works-prices__table-data works-prices__table-data--price">500 руб.</td>
+                                    </tr>
+                                    <tr class="works-prices__table-row">
+                                        <td class="works-prices__table-data works-prices__table-data--number">5</td>
+                                        <td class="works-prices__table-data works-prices__table-data--name">Бритьё головы</td>
+                                        <td class="works-prices__table-data works-prices__table-data--description">
+                                            <span class="works-prices__span">(</span>с мытьём головы
+                                            <span class="works-prices__span">)</span>
+                                        </td>
+                                        <td class="works-prices__table-data works-prices__table-data--price">1 000 руб.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="works-prices__time-wrapper">
+                            <img src="/img/works/works-prices-clock.svg" width="142" height="139" alt="" class="works-prices__clock-image">
+                            <p class="works-prices__work-time">C <time class="works-prices__time">10:00</time> до <time class="works-prices__time">14:00</time><br class="works-prices__break-row"> скидка 20%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="decorative-triangle decorative-triangle--dark decorative-triangle--works-prices-bottom">
+            </div>
+        </section>
+
+        <!-- END container -->
     </main>
-    <footer class="footer">
+    <footer class="footer footer--works">
         <div class="container">
             <div class="footer__inner">
                 <section class="footer__section footer__section--address">

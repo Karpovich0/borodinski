@@ -11,7 +11,7 @@
     color: var(--color-black);
     box-shadow: 0px 30px 50px rgba(0, 1, 1, 0.75);
     transform: translate(-50%, -50%);
-    @media (max-width: $width-tablet) {
+    @media (max-width: $width-mobile) {
         padding: 33px 20px 37px;
     }
     &__title {
@@ -20,7 +20,7 @@
         font-size: 40px;
         line-height: 52px;
         text-align: center;
-        @media(max-width: $width-tablet) {
+        @media(max-width: $width-mobile) {
             font-size: 30px;
             line-height: 30px;
         }
@@ -31,7 +31,7 @@
         font-size: 18px;
         line-height: 23px;
         text-align: center;
-        @media (max-width: $width-tablet) {
+        @media (max-width: $width-mobile) {
             margin-bottom: 28px;
         }
     }
@@ -73,7 +73,7 @@
         font-weight: 400;
         font-size: 24px;
         line-height: 31px;
-        @media(max-width: $width-tablet) {
+        @media(max-width: $width-mobile) {
             padding: 9px 19px;
             font-size: 18px;
             line-height: 30px;
@@ -85,7 +85,7 @@
         display: grid;
         grid-template-columns: 1fr max-content;
         margin-bottom: 33px;
-        @media (max-width: $width-tablet) {
+        @media (max-width: $width-mobile) {
             margin-bottom: 24px;
         }
     }
@@ -105,7 +105,7 @@
         line-height: 23px;
     }
     &__link-wrapper {
-        @media(max-width: $width-tablet) {
+        @media(max-width: $width-mobile) {
             display: flex;
             align-items: center;
         }
@@ -118,7 +118,7 @@
         text-decoration: underline;
     }
     &__button-wrapper {
-        @media(max-width: $width-tablet) {
+        @media(max-width: $width-mobile) {
             display: grid;
             grid-template-columns: 1fr 1fr;
             column-gap: 20px;
@@ -131,7 +131,7 @@
         border: none;
     }
     &__submit-button-text {
-        @media(max-width: $width-tablet) {
+        @media(max-width: $width-mobile) {
             display: none;
         }
     }
@@ -162,7 +162,7 @@
         &::after {
             transform: rotate(45deg);
         }
-        @media(max-width:$width-tablet) {
+        @media(max-width:$width-mobile) {
             position: static;
             width: 100%;
             height: auto;
@@ -185,7 +185,7 @@
     }
     &__button-close-text {
         display: none;
-        @media(max-width: $width-tablet) {
+        @media(max-width: $width-mobile) {
             display: inline;
         }
     }

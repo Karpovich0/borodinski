@@ -9,7 +9,7 @@
     line-height: 24px;
     color: var(--color-white);
     background-color: var(--color-black);
-    @media (max-width: $width-tablet) {
+    @media (max-width: $width-mobile) {
         height: 100vh;
         background-color: var(--color-brown);
         &--closed {
@@ -17,14 +17,14 @@
         }
     }
     &__nav {
-        @media (max-width: $width-tablet) {
+        @media (max-width: $width-mobile) {
             margin: 0 -20px;
             display: flex;
             flex-direction: column;
         }
     }
     &__nav--closed {
-        @media (max-width: $width-tablet) {
+        @media (max-width: $width-mobile) {
             display: grid;
             grid-template-columns: 1fr auto;
         }
@@ -35,13 +35,13 @@
         display: none;
         background-color: var(--color-brown);
         align-self: flex-end;
-        @media (max-width: $width-tablet) {
+        @media (max-width: $width-mobile) {
             display: flex;
             align-items: center;
         }
     }
     &__btn-toggle-wrapper--closed {
-        @media (max-width: $width-tablet) {
+        @media (max-width: $width-mobile) {
             order: 2;
         }
     }
@@ -84,22 +84,22 @@
     &__list-wrapper {
         display: flex;
         justify-content: space-between;
-        @media (max-width: $width-tablet) {
+        @media (max-width: $width-mobile) {
             flex-direction: column;
         }
     }
     &__list {
         display: flex;
         @media (max-width: $width-tablet) {
+            margin: 0 -10px;
+        }
+        @media (max-width: $width-mobile) {
             flex-direction: column;
         }
     }
     &__item {
-        margin-right: 65px;
-        @media (max-width: $width-tablet-wide) {
-            margin-right: 34px;
-        }
-        @media (max-width: $width-tablet) {
+        margin-right: 3px;
+        @media (max-width: $width-mobile) {
             margin-right: 0;
             padding: 13px 21px;
             background-color: var(--color-light-brown);
@@ -107,46 +107,56 @@
         }
     }
     &__item--closed {
-        @media(max-width: $width-tablet) {
+        @media(max-width: $width-mobile) {
             display: none;
         }
     }
     &__item--closed-current {
-        @media(max-width: $width-tablet) {
+        @media(max-width: $width-mobile) {
             padding-left: 94px;
             text-align: center;
         }
     }
     &__link {
-        padding: 24px 0;
+        padding: 24px 31px;
         display: block;
         @media(max-width: $width-tablet) {
+            padding: 24px 15px;
+        }
+        @media(max-width: $width-mobile) {
             padding: 0;
         }
     }
     &__button-wrapper {}
     &__button-wrapper--closed {
-        @media(max-width: $width-tablet) {
+        @media(max-width: $width-mobile) {
             display: none;
         }
     }
     &__button {
         display: flex;
         align-items: center;
-        padding: 24px 0;
+        padding: 24px 21px 24px 26px;
         background-color: transparent;
         border: none;
         &::before {
             content: "";
-            margin: 4px 9px 4px 0;
+            margin: 4px 19px 4px 0;
             position: relative;
             width: 16px;
             height: 16px;
             background-image: url("../../img/header/login-icon.svg");
             background-position: 0 0;
             background-repeat: no-repeat;
+            @media(max-width: $width-tablet) {
+                margin-right: 0;
+            }
         }
         @media(max-width: $width-tablet) {
+            padding: 24px 15px;
+            margin-right: 20px;
+        }
+        @media(max-width: $width-mobile) {
             padding: 17px 19px;
         }
     }
@@ -155,10 +165,10 @@
         font-size: 18px;
         line-height: 24px;
         color: var(--color-white);
-        @media (max-width: $width-tablet-wide) {
+        @media (max-width: $width-tablet) {
             display: none;
         }
-        @media (max-width: $width-tablet) {
+        @media (max-width: $width-mobile) {
             display: block;
         }
     }
