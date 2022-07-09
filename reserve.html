@@ -34,10 +34,10 @@
                         <li class="header__item header__item--closed">
                             <a href="/index.html" class="header__link">ГЛАВНАЯ</a>
                         </li>
-                        <li class="header__item header__item--closed-current">
+                        <li class="header__item header__item--closed">
                             <a href="/works.html" class="header__link">НАШИ РАБОТЫ</a>
                         </li>
-                        <li class="header__item header__item--closed">
+                        <li class="header__item header__item--closed-current">
                             <a href="" class="header__link ">ЗАПИСАТЬСЯ</a>
                         </li>
                         <li class="header__item header__item--closed">
@@ -56,7 +56,7 @@
             </nav>
         </div>
     </header>
-    <main class="works-main">
+    <main class="reserve-main">
 
         <div class="intro intro--works">
             <div class="logo-wrapper logo-wrapper--tablet-and-pc">
@@ -71,6 +71,62 @@
             </div>
         </div>
         <!-- END intro -->
+
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-header__title">ЗАПИСЬ НА СТРИЖКУ</h1>
+                <div class="page-header__button-wrapper">
+                    <a href="/index.html" class="button page-header__button">НА ГЛАВНУЮ</a>
+                </div>
+            </div>
+            <section class="reserve-section">
+                <h2 class="visually-hidden">
+                    Заполнить форму
+                </h2>
+                <form action="" class="reserve-form">
+                    <fieldset class="reserve-form__personal-info reserve-form__fieldset">
+                        <div class="reserve-form__group">
+                            <input type="text" class="reserve-form__input" placeholder="Фамилия">
+                            <input type="text" class="reserve-form__input" placeholder="Имя">
+                            <input type="text" class="reserve-form__input" placeholder="Отчество">
+                        </div>
+                        <div class="reserve-form__group">
+                            <input type="text" class="reserve-form__input" placeholder="Контактный телефон">
+                            <input type="text" class="reserve-form__input" placeholder="Контактный e-mail">
+
+                        </div>
+                        <div class="reserve-form__group">
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Доп. информация для мастера"></textarea>
+                        </div>
+                    </fieldset>
+                    <fieldset class="reserve-form__beard-type reserve-form__fieldset">
+                        <legend class="reserve-form__legend">ВЫБЕРИТЕ МОДЕЛЬ БОРОДЫ</legend>
+                        <ul class="reserve-form__radio-list">
+                            <li class="reserve-form__radio-item"><input type="radio" name="beard-type" id="beard-type-admiral"><label for="beard-type-admiral">адмирал</label></li>
+                            <li class="reserve-form__radio-item"><input type="radio" name="beard-type" id="beard-type-woodcutter"><label for="beard-type-woodcutter">лесоруб</label></li>
+                            <li class="reserve-form__radio-item"><input type="radio" name="beard-type" id="beard-type-polar"><label for="beard-type-polar">полярник</label></li>
+                            <li class="reserve-form__radio-item"><input type="radio" name="beard-type" id="beard-type-boyar"><label for="beard-type-boyar">боярин</label></li>
+                            <li class="reserve-form__radio-item"><input type="radio" name="beard-type" id="beard-type-sensei"><label for="beard-type-sensei">мудрец</label></li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="reserve-form__additional-service reserve-form__fieldset">
+                        <legend class="reserve-form__legend">ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ</legend>
+                        <ul class="reserve-form__checkbox-list">
+                            <li class="reserve-form__checkbox-item"><label><input type="checkbox" checked>Подкрасить бороду</label></li>
+                            <li class="reserve-form__checkbox-item"><label><input type="checkbox" checked>Накрутить усы</label></li>
+                            <li class="reserve-form__checkbox-item"><label><input type="checkbox">Причесать бороду</label></li>
+                            <li class="reserve-form__checkbox-item"><label><input type="checkbox">Подровнять виски</label></li>
+                            <li class="reserve-form__checkbox-item"><label><input type="checkbox">Убрать седину</label></li>
+                            <li class="reserve-form__checkbox-item"><label><input type="checkbox">Отполировать лысину</label></li>
+                        </ul>
+                    </fieldset>
+                    <button type="submit" class="button">ОТПРАВИТЬ ЗАЯВКУ</button>
+                </form>
+            </section>
+        </div>
+        <!-- END page-header -->
+
+
     </main>
     <footer class="footer footer--works">
         <div class="container">

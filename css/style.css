@@ -1975,7 +1975,7 @@ html {
   }
 }
 
-.works-header {
+.page-header {
   margin: 54px 0 79px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1992,13 +1992,13 @@ html {
 }
 
 @media (max-width: 1006px) {
-  .works-header {
+  .page-header {
     margin-bottom: 38px;
   }
 }
 
 @media (max-width: 767px) {
-  .works-header {
+  .page-header {
     padding-top: 109px;
     margin-bottom: 32px;
     -webkit-box-pack: center;
@@ -2008,7 +2008,7 @@ html {
   }
 }
 
-.works-header__title {
+.page-header__title {
   font-weight: 700;
   font-size: 40px;
   line-height: 1;
@@ -2016,18 +2016,18 @@ html {
 }
 
 @media (max-width: 767px) {
-  .works-header__title {
+  .page-header__title {
     font-size: 30px;
   }
 }
 
 @media (max-width: 767px) {
-  .works-header__button-wrapper {
+  .page-header__button-wrapper {
     display: none;
   }
 }
 
-.works-header__button {
+.page-header__button {
   display: block;
 }
 
