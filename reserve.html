@@ -73,7 +73,7 @@
         <!-- END intro -->
 
         <div class="container">
-            <div class="page-header">
+            <div class="page-header page-header--reserve">
                 <h1 class="page-header__title">ЗАПИСЬ НА СТРИЖКУ</h1>
                 <div class="page-header__button-wrapper">
                     <a href="/index.html" class="button page-header__button">НА ГЛАВНУЮ</a>
@@ -84,48 +84,85 @@
                     Заполнить форму
                 </h2>
                 <form action="" class="reserve-form">
-                    <fieldset class="reserve-form__personal-info reserve-form__fieldset">
-                        <div class="reserve-form__group">
+                    <fieldset class="reserve-form__fieldset reserve-form__fieldset--personal-info">
+                        <div class="reserve-form__group reserve-form__group--name-surname">
                             <input type="text" class="reserve-form__input" placeholder="Фамилия">
-                            <input type="text" class="reserve-form__input" placeholder="Имя">
+                            <input type="text" class="reserve-form__input reserve-form__input--name" placeholder="Имя">
                             <input type="text" class="reserve-form__input" placeholder="Отчество">
                         </div>
-                        <div class="reserve-form__group">
-                            <input type="text" class="reserve-form__input" placeholder="Контактный телефон">
+                        <div class="reserve-form__group  reserve-form__group--contact">
+                            <input type="text" class="reserve-form__input reserve-form__input--phone" placeholder="Контактный телефон">
                             <input type="text" class="reserve-form__input" placeholder="Контактный e-mail">
 
                         </div>
-                        <div class="reserve-form__group">
-                            <textarea name="" id="" cols="30" rows="10" placeholder="Доп. информация для мастера"></textarea>
+                        <div class="reserve-form__group reserve-form__group--textarea">
+                            <textarea class="reserve-form__textarea" name="" id="" cols="30" rows="3" placeholder="Доп. информация для мастера"></textarea>
                         </div>
                     </fieldset>
-                    <fieldset class="reserve-form__beard-type reserve-form__fieldset">
+                    <fieldset class="reserve-form__fieldset reserve-form__fieldset--beard-type">
                         <legend class="reserve-form__legend">ВЫБЕРИТЕ МОДЕЛЬ БОРОДЫ</legend>
                         <ul class="reserve-form__radio-list">
-                            <li class="reserve-form__radio-item"><input type="radio" name="beard-type" id="beard-type-admiral"><label for="beard-type-admiral">адмирал</label></li>
-                            <li class="reserve-form__radio-item"><input type="radio" name="beard-type" id="beard-type-woodcutter"><label for="beard-type-woodcutter">лесоруб</label></li>
-                            <li class="reserve-form__radio-item"><input type="radio" name="beard-type" id="beard-type-polar"><label for="beard-type-polar">полярник</label></li>
-                            <li class="reserve-form__radio-item"><input type="radio" name="beard-type" id="beard-type-boyar"><label for="beard-type-boyar">боярин</label></li>
-                            <li class="reserve-form__radio-item"><input type="radio" name="beard-type" id="beard-type-sensei"><label for="beard-type-sensei">мудрец</label></li>
+                            <li class="reserve-form__radio-item">
+                                <input type="radio" name="beard-type" id="beard-type-admiral" class="reserve-form__radio-input visually-hidden" checked>
+                                <label class="reserve-form__radio-label" for="beard-type-admiral">адмирал</label>
+                                <img src="./img/reserve/beard-1.svg" alt="" class="reserve-form__beard-img" width="52" height="49">
+                            </li>
+                            <li class="reserve-form__radio-item">
+                                <input type="radio" name="beard-type" id="beard-type-woodcutter" class="reserve-form__radio-input visually-hidden">
+                                <label class="reserve-form__radio-label" for="beard-type-woodcutter">лесоруб</label>
+                                <img src="./img/reserve/beard-2.svg" alt="" class="reserve-form__beard-img" width="58" height="68"></li>
+                            <li class="reserve-form__radio-item">
+                                <input type="radio" name="beard-type" id="beard-type-polar" class="reserve-form__radio-input visually-hidden">
+                                <label class="reserve-form__radio-label" for="beard-type-polar">полярник</label>
+                                <img src="./img/reserve/beard-3.svg" alt="" class="reserve-form__beard-img" width="63" height="78"></li>
+                            <li class="reserve-form__radio-item">
+                                <input type="radio" name="beard-type" id="beard-type-boyar" class="reserve-form__radio-input visually-hidden">
+                                <label class="reserve-form__radio-label" for="beard-type-boyar">боярин</label>
+                                <img src="./img/reserve/beard-4.svg" alt="" class="reserve-form__beard-img" width="57" height="97"></li>
+                            <li class="reserve-form__radio-item">
+                                <input type="radio" name="beard-type" id="beard-type-sensei" class="reserve-form__radio-input visually-hidden">
+                                <label class="reserve-form__radio-label" for="beard-type-sensei">мудрец</label>
+                                <img src="./img/reserve/beard-5.svg" alt="" class="reserve-form__beard-img" width="45" height="104">
+                            </li>
                         </ul>
                     </fieldset>
-                    <fieldset class="reserve-form__additional-service reserve-form__fieldset">
-                        <legend class="reserve-form__legend">ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ</legend>
+                    <fieldset class="reserve-form__fieldset reserve-form__fieldset--additional-service">
+                        <legend class="reserve-form__legend reserve-form__legend--checkbox">ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ</legend>
                         <ul class="reserve-form__checkbox-list">
-                            <li class="reserve-form__checkbox-item"><label><input type="checkbox" checked>Подкрасить бороду</label></li>
-                            <li class="reserve-form__checkbox-item"><label><input type="checkbox" checked>Накрутить усы</label></li>
-                            <li class="reserve-form__checkbox-item"><label><input type="checkbox">Причесать бороду</label></li>
-                            <li class="reserve-form__checkbox-item"><label><input type="checkbox">Подровнять виски</label></li>
-                            <li class="reserve-form__checkbox-item"><label><input type="checkbox">Убрать седину</label></li>
-                            <li class="reserve-form__checkbox-item"><label><input type="checkbox">Отполировать лысину</label></li>
+                            <li class="reserve-form__checkbox-item">
+                                <input class="visually-hidden reserve-form__checkbox-input" id="additional-service-paint-beard" type="checkbox" checked>
+                                <label class="reserve-form__checkbox-label" for="additional-service-paint-beard">Подкрасить бороду</label>
+                            </li>
+                            <li class="reserve-form__checkbox-item">
+                                <input class="visually-hidden reserve-form__checkbox-input" id="additional-service-mustache" type="checkbox" checked>
+                                <label class="reserve-form__checkbox-label" for="additional-service-mustache">Накрутить усы</label>
+                            </li>
+                            <li class="reserve-form__checkbox-item">
+                                <input class="visually-hidden reserve-form__checkbox-input" id="additional-service-beard" type="checkbox">
+                                <label class="reserve-form__checkbox-label" for="additional-service-beard">Причесать бороду</label>
+                            </li>
+                            <li class="reserve-form__checkbox-item">
+                                <input class="visually-hidden reserve-form__checkbox-input" id="additional-service-temple" type="checkbox">
+                                <label class="reserve-form__checkbox-label" for="additional-service-temple">Подровнять виски</label>
+                            </li>
+                            <li class="reserve-form__checkbox-item">
+                                <input class="visually-hidden reserve-form__checkbox-input" id="additional-service-remove-gray-hair" type="checkbox">
+                                <label class="reserve-form__checkbox-label" for="additional-service-remove-gray-hair">Убрать седину</label>
+                            </li>
+                            <li class="reserve-form__checkbox-item">
+                                <input class="visually-hidden reserve-form__checkbox-input" id="additional-service-bald" type="checkbox">
+                                <label class="reserve-form__checkbox-label" for="additional-service-bald">Отполировать лысину</label>
+                            </li>
                         </ul>
                     </fieldset>
-                    <button type="submit" class="button">ОТПРАВИТЬ ЗАЯВКУ</button>
+                    <button type="submit" class="button button--reserve">ОТПРАВИТЬ ЗАЯВКУ</button>
                 </form>
+
             </section>
         </div>
-        <!-- END page-header -->
 
+        <div class="decorative-triangle decorative-triangle--dark decorative-triangle--works-prices-bottom">
+        </div>
 
     </main>
     <footer class="footer footer--works">

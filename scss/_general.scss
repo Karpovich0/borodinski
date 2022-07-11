@@ -84,6 +84,21 @@ html {
     border: 1px solid var(--color-medium-gray);
 }
 
+.button--reserve {
+    margin-bottom: 39px;
+    color: var(--color-white);
+    background-color: var(--color-light-brown);
+    @media (min-width: $width-tablet-start) {
+        margin-bottom: 76px;
+        padding: 20px 50px;
+        font-size: 24px;
+        line-height: 31px;
+    }
+    @media (min-width: $width-pc-start) {
+        margin-bottom: 87px;
+    }
+}
+
 .section-inner {
     padding: 50px 0 40px;
     display: grid;

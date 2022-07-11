@@ -29,3 +29,9 @@
         display: block;
     }
 }
+
+.page-header--reserve {
+    @media (min-width: $width-pc-start) {
+        margin-bottom: 67px;
+    }
+}

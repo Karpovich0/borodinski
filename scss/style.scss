@@ -13,19 +13,23 @@
 }
 
 $width-tablet:1006px;
+$width-tablet-start:768px;
 $width-mobile:767px;
 $width-pc: 1199px;
+$width-pc-start:1007px;
+// 
 $table-width:630px;
 // import styles
 @import 'general';
-@import 'blocks/header';
-@import 'blocks/intro';
-@import 'blocks/stats';
-@import 'blocks/advantages';
-@import 'blocks/news';
-@import 'blocks/reviews';
-@import 'blocks/footer';
+@import 'index/header';
+@import 'index/intro';
+@import 'index/stats';
+@import 'index/advantages';
+@import 'index/news';
+@import 'index/reviews';
+@import 'index/footer';
 @import 'modal';
 @import 'page-header';
 @import 'works/works-reviews';
 @import 'works/works-prices';
+@import 'reserve';
