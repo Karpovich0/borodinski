@@ -23,16 +23,19 @@
     <header class="header header--closed">
         <div class="container">
             <nav class="header__nav header__nav--closed">
-                <div class="header__btn-toggle-wrapper header__btn-toggle-wrapper--closed"><button class="header__btn-toggle header__btn-toggle--closed"><span class="visually-hidden">Открить меню</span></button></div>
+                <button class="header__btn-toggle header__btn-toggle--closed">
+                    <span class="visually-hidden">Открить меню</span>
+                    <span class="header__btn-toggle-middle-line header__btn-toggle-middle-line--closed"></span>
+                </button>
                 <div class="logo-wrapper logo-wrapper--mobile logo-wrapper--closed">
-                    <a href="" class="logo">
+                    <a class="logo">
                         <img src="/img/logo/mobile.svg" alt="" class="logo-img" sizes="226px">
                     </a>
                 </div>
                 <div class="header__list-wrapper">
                     <ul class="header__list header__list--closed">
-                        <li class="header__item header__item--closed-current">
-                            <a href="/index.html" class="header__link">ГЛАВНАЯ</a>
+                        <li class="header__item header__item--current header__item--current-closed">
+                            <a class="header__link">ГЛАВНАЯ</a>
                         </li>
                         <li class="header__item header__item--closed">
                             <a href="/works.html" class="header__link">НАШИ РАБОТЫ</a>
@@ -50,7 +53,7 @@
                     <div class="header__button-wrapper header__button-wrapper--closed">
                         <button class="header__button" aria-label="ВОЙТИ">
                             <span class="header__button-text">ВОЙТИ</span>                  
-                    </button>
+                        </button>
                     </div>
                 </div>
             </nav>
@@ -289,8 +292,8 @@
                 <button class="modal__button-close"><span class="modal__button-close-text">ЗАКРЫТЬ</span></button>
             </div>
         </form>
-
     </section>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

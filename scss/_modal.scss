@@ -11,6 +11,9 @@
     color: var(--color-black);
     box-shadow: 0px 30px 50px rgba(0, 1, 1, 0.75);
     transform: translate(-50%, -50%);
+    &--open {
+        display: block;
+    }
     @media (max-width: $width-mobile) {
         padding: 33px 20px 37px;
     }
@@ -105,10 +108,8 @@
         line-height: 23px;
     }
     &__link-wrapper {
-        @media(max-width: $width-mobile) {
-            display: flex;
-            align-items: center;
-        }
+        display: flex;
+        align-items: center;
     }
     &__link {
         font-style: normal;

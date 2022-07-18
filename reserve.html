@@ -23,7 +23,10 @@
     <header class="header header--closed">
         <div class="container">
             <nav class="header__nav header__nav--closed">
-                <div class="header__btn-toggle-wrapper header__btn-toggle-wrapper--closed"><button class="header__btn-toggle header__btn-toggle--closed"><span class="visually-hidden">Открить меню</span></button></div>
+                <button class="header__btn-toggle header__btn-toggle--closed">
+                    <span class="visually-hidden">Открить меню</span>
+                    <span class="header__btn-toggle-middle-line header__btn-toggle-middle-line--closed"></span>
+                </button>
                 <div class="logo-wrapper logo-wrapper--mobile logo-wrapper--closed">
                     <a href="index.html" class="logo">
                         <img src="/img/logo/mobile.svg" alt="" class="logo-img" sizes="226px">
@@ -37,14 +40,14 @@
                         <li class="header__item header__item--closed">
                             <a href="/works.html" class="header__link">НАШИ РАБОТЫ</a>
                         </li>
-                        <li class="header__item header__item--closed-current">
-                            <a href="" class="header__link ">ЗАПИСАТЬСЯ</a>
+                        <li class="header__item header__item--current header__item--current-closed">
+                            <a class="header__link ">ЗАПИСАТЬСЯ</a>
                         </li>
                         <li class="header__item header__item--closed">
-                            <a href="" class="header__link">КОНТАКТЫ</a>
+                            <a class="header__link">КОНТАКТЫ</a>
                         </li>
                         <li class="header__item header__item--closed">
-                            <a href="" class="header__link">HTML ACADEMY</a>
+                            <a class="header__link">HTML ACADEMY</a>
                         </li>
                     </ul>
                     <div class="header__button-wrapper header__button-wrapper--closed">
@@ -211,6 +214,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
