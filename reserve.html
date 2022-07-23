@@ -35,23 +35,29 @@
                 <div class="header__list-wrapper">
                     <ul class="header__list header__list--closed">
                         <li class="header__item header__item--closed">
-                            <a href="/index.html" class="header__link">ГЛАВНАЯ</a>
+                            <a href="index.html" class="header__link"><span class="header__link-text">ГЛАВНАЯ</span></a>
                         </li>
                         <li class="header__item header__item--closed">
-                            <a href="/works.html" class="header__link">НАШИ РАБОТЫ</a>
+                            <a href="/works.html" class="header__link"><span class="header__link-text">НАШИ РАБОТЫ</span></a>
                         </li>
                         <li class="header__item header__item--current header__item--current-closed">
-                            <a class="header__link ">ЗАПИСАТЬСЯ</a>
+                            <a class="header__link"><span class="header__link-text">ЗАПИСАТЬСЯ</span></a>
                         </li>
                         <li class="header__item header__item--closed">
-                            <a class="header__link">КОНТАКТЫ</a>
+                            <a href="" class="header__link"><span class="header__link-text">КОНТАКТЫ</span></a>
                         </li>
                         <li class="header__item header__item--closed">
-                            <a class="header__link">HTML ACADEMY</a>
+                            <a href="" class="header__link"><span class="header__link-text">HTML ACADEMY</span></a>
                         </li>
                     </ul>
                     <div class="header__button-wrapper header__button-wrapper--closed">
                         <button class="header__button" aria-label="ВОЙТИ">
+                            <svg class="header__button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                <path d="M7 2H14V14H7V16H16V0H7V2Z"/>
+                                <path d="M7 9H0V7H7V4L11 8L7 12V9Z"/>
+                                </g>
+                            </svg>    
                             <span class="header__button-text">ВОЙТИ</span>                  
                     </button>
                     </div>
@@ -214,6 +220,30 @@
             </div>
         </div>
     </footer>
+    <div class="modal-wrapper">
+        <section class="modal">
+            <h2 class="modal__title">ЛИЧНЫЙ КАБИНЕТ</h2>
+            <p class="modal__subtext">Введите свой логин и пароль, чтобы войти</p>
+            <form action="" class="modal__form">
+                <div class="modal__input-wrapper modal__input-wrapper--login-email">
+                    <input type="text" class="modal__login-email modal__input" placeholder="Логин">
+                </div>
+                <div class="modal__input-wrapper modal__input-wrapper--password">
+                    <input type="password" class="modal__password modal__input" placeholder="Пароль">
+                </div>
+                <div class="modal__form-footer">
+                    <div class="modal__checkbox-wrapper">
+                        <input class="modal__checkbox" type="checkbox" id="modal-checkbox"><label class="modal__checkbox-label" for="modal-checkbox">Запомните меня</label>
+                    </div>
+                    <div class="modal__link-wrapper"><a href="" class="modal__link">Я забыл пароль!</a></div>
+                </div>
+                <div class="modal__button-wrapper">
+                    <button type="submit" class="modal__submit-button button">ВОЙТИ<span class="modal__submit-button-text"> В ЛИЧНЫЙ КАБИНЕТ</span></button>
+                    <button class="modal__button-close"><span class="modal__button-close-text">ЗАКРЫТЬ</span></button>
+                </div>
+            </form>
+        </section>
+        </div>
     <script src="./js/script.js"></script>
 </body>
 

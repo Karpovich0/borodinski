@@ -1,4 +1,4 @@
-.visuallyhidden:not(:focus):not(:active) {
+.visually-hidden{
     position: absolute;
     width: 1px;
     height: 1px;
@@ -11,12 +11,3 @@
     overflow: hidden;
 }
 
-.visually-hidden {
-    position: absolute;
-    clip: rect(1px, 1px, 1px, 1px);
-    padding: 0;
-    border: 0;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-}

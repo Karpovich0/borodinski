@@ -101,72 +101,6 @@
     &__btn-toggle-middle-line--closed {
         display: block;
     }
-    // &__btn-toggle-wrapper {
-    //     height: 50px;
-    //     padding: 16px 17px;
-    //     display: none;
-    //     background-color: var(--color-brown);
-    //     align-self: flex-end;
-    //     @media (max-width: $width-mobile) {
-    //         display: flex;
-    //         align-items: center;
-    //     }
-    // }
-    // &__btn-toggle-wrapper--closed {
-    //     @media (max-width: $width-mobile) {
-    //         order: 2;
-    //     }
-    // }
-    // &__btn-toggle {
-    //     position: relative;
-    //     display: block;
-    //     width: 36px;
-    //     height: 2px;
-    //     background-color: transparent;
-    //     border: none;
-    //     transition: transform 0.2s ease;
-    //     &::before,
-    //     &::after {
-    //         content: "";
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //         height: 2px;
-    //         width: 100%;
-    //         background-color: var(--color-white);
-    //         border-radius: 1px;
-    //         transition: top 0.2s ease;
-    //     }
-    //     &::before {
-    //         top: 0;
-    //         transform: rotate(-45deg);
-    //     }
-    //     &::after {
-    //         top: 0;
-    //         transform: rotate(45deg);
-    //     }
-    // }
-    // &__btn-toggle--closed {
-    //     background-color: var(--color-white);
-    //     &::before,
-    //     &::after {
-    //         content: "";
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //         height: 2px;
-    //         width: 100%;
-    //         background-color: var(--color-white);
-    //         border-radius: 1px;
-    //         transform: rotate(0);
-    //     }
-    //     &::before {
-    //         top: -9px;
-    //     }
-    //     &::after {
-    //         top: 9px;
-    //     }
-    // }
     &__list-wrapper {
         display: flex;
         justify-content: space-between;
@@ -192,12 +126,41 @@
             background-color: var(--color-light-brown);
             box-shadow: inset 0px -1px 0px #71543F, inset 0px 1px 0px #886E5B;
         }
+        &:hover{
+            background-color: var(--color-white);
+            color: var(--color-black);
+        }
+        &:active{
+            background-color: var(--color-white);
+            color: rgba($color: #000000, $alpha: 0.3);
+        }
     }
     &__item--closed {
         @media(max-width: $width-mobile) {
             display: none;
         }
     }
+    &__item--current{ 
+        // @media(min-width: $width-pc-start) {                 
+            &:hover{
+                background-color: transparent;
+                color: var(--color-white);
+            // }
+        }
+    }
+    &__item--current &__link-text{
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            height: 3px;
+            width: 100%;
+            background-color: var(--color-light-brown);
+        }
+    }
+    
     &__item--current-closed {
         @media(max-width: $width-mobile) {
             padding-left: 94px;
@@ -209,13 +172,19 @@
         padding: 24px 31px;
         display: block;
         @media(max-width: $width-tablet) {
-            padding: 24px 15px;
+            padding: 24px 15px;            
         }
         @media(max-width: $width-mobile) {
             padding: 0;
         }
     }
-    &__button-wrapper {}
+    &__link-text{
+
+    }
+    &__button-wrapper {
+        display: flex;
+        
+    }
     &__button-wrapper--closed {
         @media(max-width: $width-mobile) {
             display: none;
@@ -226,28 +195,42 @@
         align-items: center;
         padding: 24px 21px 24px 26px;
         background-color: transparent;
-        border: none;
-        &::before {
-            content: "";
-            margin: 4px 0;
-            position: relative;
-            width: 16px;
-            height: 16px;
-            background-image: url("../../img/header/login-icon.svg");
-            background-position: 0 0;
-            background-repeat: no-repeat;
-            @media(max-width: $width-tablet) {
-                margin-right: 12px;
-            }
+        border: none;  
+        @media(max-width: $width-tablet) {           
+          padding-left: 21px;
         }
-        @media(max-width: $width-tablet) {
-            width: 100%;
-            padding: 24px 15px;
-            margin-right: 20px;
+        &:hover{
+            cursor: pointer;
+            background-color: var(--color-white);            
         }
-        @media(max-width: $width-mobile) {
-            margin-right: 0;
-            padding: 17px 19px;
+        &:active{
+            background-color: var(--color-white);
+        }      
+    }   
+    &__button:hover &__button-text{
+        color: var(--color-black);
+    }
+    &__button:hover &__button-icon, &__button:active &__button-icon{
+        path{
+            fill: var(--color-black);
+        }
+    }
+    &__button:active &__button-icon g{
+        opacity: 0.1;
+    }
+    &__button:active &__button-text {
+        color: rgba($color: #000000, $alpha: 0.3);
+    }
+    &__button-icon{       
+        position: relative;
+        @media(max-width: $width-mobile) {           
+            margin-right: 12px;
+        }        
+        g{
+            opacity:0.3;
+        }
+        path{
+            fill: var(--color-white);
         }
     }
     &__button-text {

@@ -19,6 +19,9 @@ html {
 .body--works {
     color: var(--color-black);
 }
+.body--lock{
+    overflow: hidden;
+}
 
 .container {
     margin: 0 auto;
