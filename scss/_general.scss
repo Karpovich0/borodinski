@@ -204,6 +204,7 @@ html {
 }
 
 .slider-navigator {
+    
     display: flex;
     justify-content: center;
     &--advantages {
@@ -258,5 +259,39 @@ html {
     }
     &__button--white.slider-navigator__button--active {
         background-color: var(--color-white);
+    }
+}
+.swiper-pagination-wrapper{
+    position: absolute;
+    bottom: 17px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    z-index: 100;
+    @media(min-width: $width-tablet-start) {          
+        bottom: -60px;
+    } 
+}
+.swiper-pagination-wrapper .swiper-pagination{
+    display: flex;   
+    justify-content: space-between;
+}
+.swiper-pagination-wrapper .swiper-pagination-bullet{
+    display: block;
+    padding: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 0;
+    border: 1px solid var(--color-gray);
+    background-color: transparent;
+    transform: rotate(45deg);
+    transform-origin: center;
+    cursor: pointer;
+    transition: opacity 0.3s ease;    
+    &-active{
+        background-color: var(--color-gray);
+    }
+    &:hover:not(&-active){       
+        opacity: 1;
     }
 }

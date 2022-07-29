@@ -124,35 +124,37 @@
         <!-- END stats -->
         <section class="advantages">
             <h2 class="visually-hidden">Наши преимущества</h2>
-            <ul class="advantages__list container">
-                <li class="advantages__item">
-                    <div class="advantages__img-wrapper">
-                        <img src="/img/advantages/advantage-1-icon.svg" alt="" class="advantages__img" width="95" height="94">
-                    </div>
-                    <div class="advantages__content-wrapper">
-                        <h3 class="advantages__title">БЫСТРО</h3>
-                        <p class="advantages__description">Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки</p>
-                    </div>
-                </li>
-                <li class="advantages__item">
-                    <div class="advantages__img-wrapper">
-                        <img src="/img/advantages/advantage-2-icon.svg" alt="" class="advantages__img" width="95" height="88">
-                    </div>
-                    <div class="advantages__content-wrapper">
-                        <h3 class="advantages__title">КРУТО</h3>
-                        <p class="advantages__description">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино. Во всяком случае внешне.</p>
-                    </div>
-                </li>
-                <li class="advantages__item">
-                    <div class="advantages__img-wrapper">
-                        <img src="/img/advantages/advantage-3-icon.svg" alt="" class="advantages__img" width="95" height="91">
-                    </div>
-                    <div class="advantages__content-wrapper">
-                        <h3 class="advantages__title">ДОРОГО</h3>
-                        <p class="advantages__description">Наши мастера — профессионалы своего дела не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
-                    </div>
-                </li>
-            </ul>
+            <div class="swiper advantages__slider">
+                <ul class="advantages__list container swiper-wrapper">
+                    <li class="advantages__item swiper-slide">
+                        <div class="advantages__img-wrapper">
+                            <img src="/img/advantages/advantage-1-icon.svg" alt="" class="advantages__img" width="95" height="94">
+                        </div>
+                        <div class="advantages__content-wrapper">
+                            <h3 class="advantages__title">БЫСТРО</h3>
+                            <p class="advantages__description">Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки</p>
+                        </div>
+                    </li>
+                    <li class="advantages__item swiper-slide">
+                        <div class="advantages__img-wrapper">
+                            <img src="/img/advantages/advantage-2-icon.svg" alt="" class="advantages__img" width="95" height="88">
+                        </div>
+                        <div class="advantages__content-wrapper">
+                            <h3 class="advantages__title">КРУТО</h3>
+                            <p class="advantages__description">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино. Во всяком случае внешне.</p>
+                        </div>
+                    </li>
+                    <li class="advantages__item swiper-slide">
+                        <div class="advantages__img-wrapper">
+                            <img src="/img/advantages/advantage-3-icon.svg" alt="" class="advantages__img" width="95" height="91">
+                        </div>
+                        <div class="advantages__content-wrapper">
+                            <h3 class="advantages__title">ДОРОГО</h3>
+                            <p class="advantages__description">Наши мастера — профессионалы своего дела не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
             <div class="slider-navigator slider-navigator--advantages">
                 <ul class="slider-navigator__list">
                     <li class="slider-navigator__item slider-navigator__item--active"><button class="slider-navigator__button slider-navigator__button--white slider-navigator__button--active"><span class="visually-hidden">1</span></button></li>
@@ -206,51 +208,56 @@
                         <button class="button">ОСТАВИТЬ СВОЙ</button>
                     </div>
                     <div class="section-content reviews__content">
-                        <div class="reviews__slider swiper">
-                            <div class="reviews__slider-inner swiper-wrapper">
-                                <div class="reviews__box swiper-slide">
-                                    <picture class="reviews__picture">
-                                        <source media="(max-width:768px)" srcset="/img/reviews/author-1-50.jpg 50w" sizes="50">
-                                        <source media="(max-width:1006px)" srcset="/img/reviews/author-1-80.jpg 80w" sizes="80">
-                                        <img src="/img/reviews/author-1.jpg" alt="" class="reviews__img">
-                                    </picture>
-                                    <div class="reviews__details">
-                                        <h3 class="reviews__author">Трэвис Баркер</h3>
-                                        <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+                        <div class="reviews__inner">
+                            <div class="reviews__slider swiper">
+                                <div class="reviews__slider-inner swiper-wrapper">
+                                    <div class="reviews__box swiper-slide">
+                                        <picture class="reviews__picture">
+                                            <source media="(max-width:768px)" srcset="/img/reviews/author-1-50.jpg 50w" sizes="50">
+                                            <source media="(max-width:1006px)" srcset="/img/reviews/author-1-80.jpg 80w" sizes="80">
+                                            <img src="/img/reviews/author-1.jpg" alt="" class="reviews__img">
+                                        </picture>
+                                        <div class="reviews__details">
+                                            <h3 class="reviews__author">Трэвис Баркер</h3>
+                                            <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="reviews__box swiper-slide">
-                                    <picture class="reviews__picture">
-                                        <source media="(max-width:768px)" srcset="/img/reviews/author-1-50.jpg 50w" sizes="50">
-                                        <source media="(max-width:1006px)" srcset="/img/reviews/author-1-80.jpg 80w" sizes="80">
-                                        <img src="/img/reviews/author-1.jpg" alt="" class="reviews__img">
-                                    </picture>
-                                    <div class="reviews__details">
-                                        <h3 class="reviews__author">Трэвис Баркер</h3>
-                                        <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+                                    <div class="reviews__box swiper-slide">
+                                        <picture class="reviews__picture">
+                                            <source media="(max-width:768px)" srcset="/img/reviews/author-1-50.jpg 50w" sizes="50">
+                                            <source media="(max-width:1006px)" srcset="/img/reviews/author-1-80.jpg 80w" sizes="80">
+                                            <img src="/img/reviews/author-1.jpg" alt="" class="reviews__img">
+                                        </picture>
+                                        <div class="reviews__details">
+                                            <h3 class="reviews__author">Трэвис Баркер</h3>
+                                            <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="reviews__box swiper-slide">
-                                    <picture class="reviews__picture">
-                                        <source media="(max-width:768px)" srcset="/img/reviews/author-1-50.jpg 50w" sizes="50">
-                                        <source media="(max-width:1006px)" srcset="/img/reviews/author-1-80.jpg 80w" sizes="80">
-                                        <img src="/img/reviews/author-1.jpg" alt="" class="reviews__img">
-                                    </picture>
-                                    <div class="reviews__details">
-                                        <h3 class="reviews__author">Трэвис Баркер</h3>
-                                        <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+                                    <div class="reviews__box swiper-slide">
+                                        <picture class="reviews__picture">
+                                            <source media="(max-width:768px)" srcset="/img/reviews/author-1-50.jpg 50w" sizes="50">
+                                            <source media="(max-width:1006px)" srcset="/img/reviews/author-1-80.jpg 80w" sizes="80">
+                                            <img src="/img/reviews/author-1.jpg" alt="" class="reviews__img">
+                                        </picture>
+                                        <div class="reviews__details">
+                                            <h3 class="reviews__author">Трэвис Баркер</h3>
+                                            <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+                                        </div>
                                     </div>
-                                </div>
+                                </div>                               
                             </div>
+                            <div class="swiper-pagination-wrapper">
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <!-- <div class="slider-navigator">
+                                <ul class="slider-navigator__list slider-navigator__list--reviews">
+                                    <li class="slider-navigator__item slider-navigator__item--active"><button class="slider-navigator__button slider-navigator__button--active"><span class="visually-hidden">1</span></button></li>
+                                    <li class="slider-navigator__item"><button class="slider-navigator__button"><span class="visually-hidden">2</span></button></li>
+                                    <li class="slider-navigator__item"><button class="slider-navigator__button"><span class="visually-hidden">3</span></button></li>
+                                </ul>
+                            </div> -->
                             <button class="reviews__button reviews__button--back"><span class="visually-hidden">Назад</span></button>
                             <button class="reviews__button reviews__button--forward"><span class="visually-hidden">Вперед</span></button>
-                        </div>
-                        <div class="slider-navigator">
-                            <ul class="slider-navigator__list slider-navigator__list--reviews swiper-pagination">
-                                <li class="slider-navigator__item slider-navigator__item--active"><button class="slider-navigator__button slider-navigator__button--active"><span class="visually-hidden">1</span></button></li>
-                                <li class="slider-navigator__item"><button class="slider-navigator__button"><span class="visually-hidden">2</span></button></li>
-                                <li class="slider-navigator__item"><button class="slider-navigator__button"><span class="visually-hidden">3</span></button></li>
-                            </ul>
                         </div>
                     </div>
                 </div>

@@ -1,25 +1,19 @@
 .reviews {
     background-color: var(--color-creamy);
+    @media(min-width: $width-tablet-start) {          
+        margin-bottom: 63px;
+    }    
     &__content {
         position: relative;
     }
+    &
     &__slider {
-        margin-bottom: 32px;
-        display: grid;
-        grid-template-columns:  50px 10px repeat(4, 1fr 10px) 50px;
+        // margin-bottom: 32px;        
         column-gap: 20px;
-        max-width: 100%;
-        @media (max-width: $width-tablet) {
-            column-gap: 0;
-        }
-        @media(max-width:$width-mobile) {
-            grid-template-columns: 1fr;
-            margin-bottom: 32px;
-        }
+        max-width: 100%;       
     }
-    &__button {
-        position: relative;
-        z-index: 100;         
+    &__button {       
+        height: auto;         
         background: url(../../img/reviews/arrow.svg) no-repeat center center;
         border: 1px solid var(--color-light-gray);
         cursor: pointer;
@@ -29,19 +23,38 @@
         &--forward {
             transform: rotate(180deg);
         }
+        @media(min-width: $width-pc-start) {          
+            &:hover{
+            background-color: var(--color-light-gray); 
+            }
+        }
+        &:active{
+            background-color: #cbc3bb; 
+        }
         @media(max-width:$width-mobile) {
             display: none;
         }
     }
-    &__slider-inner {grid-column: 2/-2;}
+    &__inner{
+        display: grid;
+        grid-template-columns:  50px 1fr 50px;        
+        grid-column-gap: 20px;
+        @media (max-width: $width-tablet) {
+            column-gap: 0;
+        }
+        @media(max-width:$width-mobile) {
+            grid-template-columns: 1fr;
+            margin-bottom: 32px;
+        }
+    }    
     &__box {
         display: grid;
         grid-template-columns: 249px 1fr;
-        max-width: 100%;        
+        max-width: 100%;  
+        border: 1px solid var(--color-light-gray);      
         @media (max-width: $width-tablet) {
             grid-template-columns: 80px 1fr;
-            padding: 30px 30px 35px;
-            border: 1px solid var(--color-light-gray);
+            padding: 30px 30px 35px;           
             border-right: 0;
             border-left: 0;
         }
@@ -52,8 +65,12 @@
         }
     }
     &__picture {
+       
         display: flex;
         align-items: center;
+        @media (min-width: $width-tablet) {
+            margin: -1px -1px;
+        }
     }
     &__img {
         width: 249px;
@@ -73,8 +90,7 @@
         padding: 15px 70px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        border: 1px solid var(--color-light-gray);
+        justify-content: center;        
         border-left: none;
         @media (max-width: $width-tablet) {
             padding: 0 0 0 30px;

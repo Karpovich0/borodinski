@@ -4,8 +4,8 @@
     &__list {
         padding-top: 30px;
         padding-bottom: 38px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        // display: grid;
+        // grid-template-columns: repeat(3, 1fr);
         @media (max-width: $width-tablet) {
             padding-bottom: 10px;
             display: grid;

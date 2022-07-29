@@ -1,5 +1,4 @@
 "use strict";
-
 // open menu variables
 const body = document.querySelector(".body");
 const header = document.querySelector(".header");
@@ -16,13 +15,15 @@ const login = document.querySelector(".header__button");
 // const modal = document.querySelector(".modal");
 const modalWrapper = document.querySelector(".modal-wrapper");
 const modalButtonClose = document.querySelector(".modal__button-close");
+// create slider when width less than 769px variables
+
+
 
 if (toggleButton) {
     toggleButton.addEventListener("click", function(e) {
         toggleMenu();
     });
 }
-
 
 if (login) {
     login.addEventListener("click", function(e) {
@@ -65,30 +66,64 @@ function toggleLoginForm() {
         toggleMenu();
     }
 }
+//Swiper fore advantages
 
-//Swiper
+new Swiper(".advantages__slider",{
+    // arrows
+    // navigation:{
+    //     nextEl:".reviews__button--forward",
+    //     prevEl:".reviews__button--back"
+    // },
+    // grabCursor:true,
+    // keyboard:{
+    //     enable:true,
+    //     onlyViewport:true,        
+    // },
+    // spaceBetween:20,
+    // loop:true,
+    // slidesPerView:1,
+    // autoHeight:true,
+    
+    // pagination:{
+    //     el:".swiper-pagination",
+    //     clickable:true,   
+    // }
+});
+
+//Swiper fore reviews
 
 new Swiper(".reviews__slider",{
     // arrows
     navigation:{
-        nextEl:".swiper-button-next",
-        prevEl:".swiper-button-prev"
+        nextEl:".reviews__button--forward",
+        prevEl:".reviews__button--back"
     },
     grabCursor:true,
     keyboard:{
         enable:true,
         onlyViewport:true,        
     },
-    // spaceBetween:80,
+    spaceBetween:20,
     loop:true,
     slidesPerView:1,
+    autoHeight:true,
     
-    // pagination:{
-    //     el:".swiper-pagination",
-    //     clickable:true,
-    //     // dynamicBullets:true,
-    //     renderBullet:function(index,className){
-    //         return '<span class="' + className + '">' + (index+1)+'</span>';
-    //     }
-    // }
+    pagination:{
+        el:".swiper-pagination",
+        clickable:true,   
+    }
 });
+
+//listen for window resize event
+window.addEventListener('resize', function(event){
+    const viewportWithWithoutScrollbar = document.documentElement.clientWidth;       
+    if(viewportWithWithoutScrollbar<=768){
+       
+    }else{
+
+    }
+});
+
+function makeSwiperSlider(){
+
+}
