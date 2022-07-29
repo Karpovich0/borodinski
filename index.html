@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>    
     <link rel="stylesheet" href="css2/normalize.css">
     <link rel="stylesheet" href="css2/DDS3.css">
     <link rel="stylesheet" href="css2/visually-hidden.css">
@@ -172,18 +173,24 @@
                     </div>
                     <div class="section-content news__content">
                         <ul class="news__list">
-                            <li class="news__item news__item--first">
-                                <div class="news__time"><span class="news__time-day">29</span><span>СЕНТ</span></div>
-                                <div class="news__description">Нам наконец завезли Ягермайстер! Теперь вы можете пропуси ть стаканчик во время стрижки.
-                                </div>
+                            <li class="news__item">
+                                <a href="" class="news__link news__link--first">
+                                    <time class="news__time"><span class="news__time-day">29</span><span>СЕНТ</span></time>
+                                    <div class="news__description">Нам наконец завезли Ягермайстер! Теперь вы можете пропуси ть стаканчик во время стрижки.
+                                    </div>
+                                </a>
                             </li>
-                            <li class="news__item news__item--second">
-                                <time class="news__time"><span class="news__time-day">19</span><span>СЕНТ</span></time>
-                                <div class="news__description">В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил наши стройные ряды. Спешите записаться!</div>
+                            <li class="news__item">
+                                <a href="" class="news__link news__link--second">
+                                    <time class="news__time"><span class="news__time-day">19</span><span>СЕНТ</span></time>
+                                    <div class="news__description">В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил наши стройные ряды. Спешите записаться!</div>
+                                </a>
                             </li>
-                            <li class="news__item news__item--third">
-                                <time class="news__time"><span class="news__time-day">9</span>СЕНТ<span></span></time>
-                                <div class="news__description">Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!</div>
+                            <li class="news__item">
+                                <a href="" class="news__link news__link--third">
+                                    <time class="news__time"><span class="news__time-day">9</span><span>СЕНТ</span></time>
+                                    <div class="news__description">Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!</div>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -199,9 +206,31 @@
                         <button class="button">ОСТАВИТЬ СВОЙ</button>
                     </div>
                     <div class="section-content reviews__content">
-                        <div class="reviews__slider">
-                            <div class="reviews__slider-inner">
-                                <div class="reviews__box">
+                        <div class="reviews__slider swiper">
+                            <div class="reviews__slider-inner swiper-wrapper">
+                                <div class="reviews__box swiper-slide">
+                                    <picture class="reviews__picture">
+                                        <source media="(max-width:768px)" srcset="/img/reviews/author-1-50.jpg 50w" sizes="50">
+                                        <source media="(max-width:1006px)" srcset="/img/reviews/author-1-80.jpg 80w" sizes="80">
+                                        <img src="/img/reviews/author-1.jpg" alt="" class="reviews__img">
+                                    </picture>
+                                    <div class="reviews__details">
+                                        <h3 class="reviews__author">Трэвис Баркер</h3>
+                                        <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+                                    </div>
+                                </div>
+                                <div class="reviews__box swiper-slide">
+                                    <picture class="reviews__picture">
+                                        <source media="(max-width:768px)" srcset="/img/reviews/author-1-50.jpg 50w" sizes="50">
+                                        <source media="(max-width:1006px)" srcset="/img/reviews/author-1-80.jpg 80w" sizes="80">
+                                        <img src="/img/reviews/author-1.jpg" alt="" class="reviews__img">
+                                    </picture>
+                                    <div class="reviews__details">
+                                        <h3 class="reviews__author">Трэвис Баркер</h3>
+                                        <p class="reviews__text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+                                    </div>
+                                </div>
+                                <div class="reviews__box swiper-slide">
                                     <picture class="reviews__picture">
                                         <source media="(max-width:768px)" srcset="/img/reviews/author-1-50.jpg 50w" sizes="50">
                                         <source media="(max-width:1006px)" srcset="/img/reviews/author-1-80.jpg 80w" sizes="80">
@@ -217,7 +246,7 @@
                             <button class="reviews__button reviews__button--forward"><span class="visually-hidden">Вперед</span></button>
                         </div>
                         <div class="slider-navigator">
-                            <ul class="slider-navigator__list slider-navigator__list--reviews">
+                            <ul class="slider-navigator__list slider-navigator__list--reviews swiper-pagination">
                                 <li class="slider-navigator__item slider-navigator__item--active"><button class="slider-navigator__button slider-navigator__button--active"><span class="visually-hidden">1</span></button></li>
                                 <li class="slider-navigator__item"><button class="slider-navigator__button"><span class="visually-hidden">2</span></button></li>
                                 <li class="slider-navigator__item"><button class="slider-navigator__button"><span class="visually-hidden">3</span></button></li>
@@ -301,7 +330,10 @@
         </form>
     </section>
     </div>
-    <script src="./js/script.js"></script>
+    
+   
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>  
 </body>
 
 </html>

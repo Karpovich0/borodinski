@@ -68,6 +68,16 @@
             justify-content: space-between;
             align-items: center;
             align-self: end;
+            &:active::before, &:active::after{
+                opacity: 0.3;
+            }
+        }
+    }
+    &__btn-toggle:active &__btn-toggle-middle-line{
+        @media (max-width: $width-mobile) {
+            &:active{
+                opacity: 0.3;
+            }
         }
     }
     &__btn-toggle--closed {
@@ -93,13 +103,14 @@
         }
     }
     &__btn-toggle-middle-line {
-        display: none;
+        opacity: 0;
         width: 100%;
         height: 2px;
         background-color: var(--color-white);
+        transition: opacity 0.2s ease;       
     }
     &__btn-toggle-middle-line--closed {
-        display: block;
+        opacity: 1;
     }
     &__list-wrapper {
         display: flex;
@@ -125,14 +136,27 @@
             padding: 13px 21px;
             background-color: var(--color-light-brown);
             box-shadow: inset 0px -1px 0px #71543F, inset 0px 1px 0px #886E5B;
+            &:active{
+                color: rgba(#ffffff,0.3);
+            }
         }
-        &:hover{
-            background-color: var(--color-white);
-            color: var(--color-black);
+        @media (min-width: $width-tablet-start) {
+            &:hover{                
+                color: var(--color-light-brown);
+            }
+            &:active{                
+                color: rgba($color: #ffffff, $alpha: 0.3);
+            }
         }
-        &:active{
-            background-color: var(--color-white);
-            color: rgba($color: #000000, $alpha: 0.3);
+        @media(min-width: $width-pc-start) {
+            &:hover{
+                background-color: var(--color-white);
+                color: var(--color-black);
+            }
+            &:active{
+                background-color: var(--color-white);
+                color: rgba($color: #000000, $alpha: 0.3);
+            }
         }
     }
     &__item--closed {
@@ -140,12 +164,10 @@
             display: none;
         }
     }
-    &__item--current{ 
-        // @media(min-width: $width-pc-start) {                 
-            &:hover{
-                background-color: transparent;
-                color: var(--color-white);
-            // }
+    &__item--current{                      
+        &:hover{
+            background-color: transparent;
+            color: var(--color-white);           
         }
     }
     &__item--current &__link-text{
@@ -184,6 +206,7 @@
     &__button-wrapper {
         display: flex;
         
+        
     }
     &__button-wrapper--closed {
         @media(max-width: $width-mobile) {
@@ -196,30 +219,49 @@
         padding: 24px 21px 24px 26px;
         background-color: transparent;
         border: none;  
+        cursor: pointer;
+        @media(max-width: $width-mobile) {
+            width: 100%;
+        }
         @media(max-width: $width-tablet) {           
-          padding-left: 21px;
+            padding-left: 21px;
         }
-        &:hover{
-            cursor: pointer;
-            background-color: var(--color-white);            
-        }
-        &:active{
-            background-color: var(--color-white);
-        }      
-    }   
-    &__button:hover &__button-text{
-        color: var(--color-black);
+        @media(min-width: $width-pc-start){
+            &:hover, &:active{               
+                background-color: var(--color-white);            
+            }
+        } 
     }
-    &__button:hover &__button-icon, &__button:active &__button-icon{
-        path{
-            fill: var(--color-black);
+    @media(max-width: $width-mobile){   
+        &__button:active &__button-text{
+            color: rgba(#ffffff,0.3);
         }
     }
-    &__button:active &__button-icon g{
-        opacity: 0.1;
-    }
-    &__button:active &__button-text {
-        color: rgba($color: #000000, $alpha: 0.3);
+    @media(min-width: $width-tablet-start){
+        &__button:hover &__button-icon{
+            g{
+                opacity: 1;
+            }
+            path{
+                fill: var(--color-light-brown);
+            }
+        }              
+    }  
+    @media(min-width: $width-pc-start){   
+        &__button:hover &__button-text{
+            color: var(--color-black);
+        }
+        &__button:hover &__button-icon, &__button:active &__button-icon{
+            path{
+                fill: var(--color-black);
+            }
+        }
+        &__button:active &__button-icon g{
+            opacity: 0.1;
+        }
+        &__button:active &__button-text {
+            color: rgba($color: #000000, $alpha: 0.3);
+        }
     }
     &__button-icon{       
         position: relative;

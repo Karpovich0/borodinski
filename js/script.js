@@ -1,4 +1,5 @@
 "use strict";
+
 // open menu variables
 const body = document.querySelector(".body");
 const header = document.querySelector(".header");
@@ -64,3 +65,30 @@ function toggleLoginForm() {
         toggleMenu();
     }
 }
+
+//Swiper
+
+new Swiper(".reviews__slider",{
+    // arrows
+    navigation:{
+        nextEl:".swiper-button-next",
+        prevEl:".swiper-button-prev"
+    },
+    grabCursor:true,
+    keyboard:{
+        enable:true,
+        onlyViewport:true,        
+    },
+    // spaceBetween:80,
+    loop:true,
+    slidesPerView:1,
+    
+    // pagination:{
+    //     el:".swiper-pagination",
+    //     clickable:true,
+    //     // dynamicBullets:true,
+    //     renderBullet:function(index,className){
+    //         return '<span class="' + className + '">' + (index+1)+'</span>';
+    //     }
+    // }
+});

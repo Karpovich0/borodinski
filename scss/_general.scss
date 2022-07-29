@@ -80,6 +80,17 @@ html {
     border: 1px solid var(--color-light-gray);
     background-color: transparent;
     cursor: pointer;
+    transition: border-color 0.2s ease;
+    &:hover{
+        @media (min-width: $width-tablet-start) {
+            border-color: var(--color-gray-for-button);
+        }
+    }
+    &:active{       
+        background-color: var(--color-gray-for-button);
+        border-color: var(--color-gray-for-button);
+        color: rgba($color: #000000, $alpha: 0.3);
+    }
 }
 
 .button--dark {

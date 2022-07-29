@@ -20,27 +20,49 @@
             grid-column-gap: 20px;
         }
     }
-    &__item {
+    &__link {
         display: grid;
         grid-template-columns: auto 1fr;
-        grid-column-gap: 21px;
+        grid-column-gap: 21px;         
         @media (max-width: $width-tablet) {
             &--third {
                 display: none;
             }
         }
         @media (max-width: $width-mobile) {
-            &:first-child {
+            &--first {
                 padding-bottom: 17px;
                 border-bottom: 1px solid var(--color-light-gray);
             }
-            &:nth-child(2) {
+            &--second {
                 margin-top: 16px;
                 margin-bottom: 51px;
             }
         }
     }
+    @media (min-width: $width-tablet-start) {
+        &__link:hover &__time{        
+            background-color: var(--color-light-brown);      
+        }  
+        &__link:hover &__description{      
+            text-decoration: underline;
+            color: var(--color-light-brown);
+            
+        }
+        &__link:active &__time{        
+            background-color: var(--color-brown);
+            span{
+                opacity: 0.3;
+            }                 
+        }
+        &__link:active &__description{      
+            text-decoration: underline;
+            color: var(--color-brown);             
+        }
+
+    }
     &__time {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -53,7 +75,18 @@
         font-size: 16px;
         line-height: 0.80;
         color: var(--color-white);
-        background: url(../../img/news/bg.svg) no-repeat 0 0;
+        background-color: var(--color-black);
+        transition: background-color 0.2s ease;
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border-top: 10px solid transparent;
+            border-left: 25px solid var(--color-creamy);
+            border-right: 25px solid  var(--color-creamy);
+        }
     }
     &__time-day {
         font-weight: 700;
@@ -66,6 +99,7 @@
         font-size: 18px;
         line-height: 27px;
         color: var(--color-black);
+        transition: color 0.2s linear;
         @media (max-width: $width-mobile) {
             padding-right: 5px;
         }
