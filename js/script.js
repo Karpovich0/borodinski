@@ -16,8 +16,9 @@ const login = document.querySelector(".header__button");
 const modalWrapper = document.querySelector(".modal-wrapper");
 const modalButtonClose = document.querySelector(".modal__button-close");
 // create slider when width less than 769px variables
-
-
+const advantagesList = document.querySelector(".advantages__list");
+const advantagesItems = document.querySelectorAll(".advantages__item");
+const advantagesPaginationWrapper = document.querySelector(".swiper-pagination-wrapper--advatages");
 
 if (toggleButton) {
     toggleButton.addEventListener("click", function(e) {
@@ -66,29 +67,6 @@ function toggleLoginForm() {
         toggleMenu();
     }
 }
-//Swiper fore advantages
-
-new Swiper(".advantages__slider",{
-    // arrows
-    // navigation:{
-    //     nextEl:".reviews__button--forward",
-    //     prevEl:".reviews__button--back"
-    // },
-    // grabCursor:true,
-    // keyboard:{
-    //     enable:true,
-    //     onlyViewport:true,        
-    // },
-    // spaceBetween:20,
-    // loop:true,
-    // slidesPerView:1,
-    // autoHeight:true,
-    
-    // pagination:{
-    //     el:".swiper-pagination",
-    //     clickable:true,   
-    // }
-});
 
 //Swiper fore reviews
 
@@ -98,32 +76,55 @@ new Swiper(".reviews__slider",{
         nextEl:".reviews__button--forward",
         prevEl:".reviews__button--back"
     },
-    grabCursor:true,
-    keyboard:{
-        enable:true,
-        onlyViewport:true,        
-    },
+    grabCursor:true,    
     spaceBetween:20,
     loop:true,
-    slidesPerView:1,
-    autoHeight:true,
-    
+    slidesPerView:1,     
     pagination:{
-        el:".swiper-pagination",
+        el:".swiper-pagination--reviews",
         clickable:true,   
     }
 });
 
-//listen for window resize event
-window.addEventListener('resize', function(event){
-    const viewportWithWithoutScrollbar = document.documentElement.clientWidth;       
-    if(viewportWithWithoutScrollbar<=768){
-       
-    }else{
+//Swiper for advantages
 
+// breakpoint where swiper will be destroyed   
+const breakpoint = window.matchMedia( '(min-width:769px)' );
+
+// keep track of swiper instances to destroy later
+let advantagesSwiper;  
+
+const breakpointChecker = function() {
+    if ( breakpoint.matches === true ) {        
+        if ( advantagesSwiper !== undefined ) advantagesSwiper.destroy( true, true );
+        advantagesList.classList.add("advantages__list--without-swiper");
+        advantagesItems.forEach(item => item.classList.add("advantages__item--without-swiper")); 
+        advantagesPaginationWrapper.classList.add("swiper-pagination-wrapper--advatages-without-swiper");       
+    } else if ( breakpoint.matches === false ) {        
+        advantagesList.classList.remove("advantages__list--without-swiper");
+        advantagesItems.forEach(item => item.classList.remove("advantages__item--without-swiper"));
+        advantagesPaginationWrapper.classList.remove("swiper-pagination-wrapper--advatages-without-swiper");
+        return enableSwiper();      
     }
+};
+    
+const enableSwiper = function() {
+    advantagesSwiper = new Swiper(".advantages__slider",{    
+    grabCursor:true,   
+    spaceBetween:20,
+    loop:true,
+    slidesPerView:1,   
+    pagination:{
+        el:".advatages__pagination",
+        clickable:true,   
+    }
+    });  
+};    
+    
+//listen for window resize event
+window.addEventListener('resize', function(event){          
+    breakpointChecker();
 });
-
-function makeSwiperSlider(){
-
-}
+  
+// kickstart of swiper for advantages
+breakpointChecker();

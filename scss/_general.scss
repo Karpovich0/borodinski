@@ -144,7 +144,7 @@ html {
     font-weight: 700;
     font-size: 40px;
     line-height: 50px;
-    color: var(--color-black);
+    color: var(--color-black);   
     @media(max-width: $width-tablet) {
         padding-left: 0;
     }
@@ -153,6 +153,11 @@ html {
         text-align: center;
         font-size: 30px;
         line-height: 30px;
+    }
+    &--reviews{
+        @media(max-width: $width-mobile) {
+            margin-bottom: 26px; 
+        } 
     }
 }
 
@@ -203,64 +208,6 @@ html {
     }
 }
 
-.slider-navigator {
-    
-    display: flex;
-    justify-content: center;
-    &--advantages {
-        display: none;
-        @media (max-width: $width-mobile) {
-            display: flex;
-        }
-    }
-    @media (max-width: $width-tablet) {
-        position: absolute;
-        bottom: 17px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    @media (max-width: $width-mobile) {
-        bottom: 18px;
-    }
-    &--advantages {
-        bottom: 33px;
-    }
-    &__list {
-        display: flex;
-        justify-content: center;
-        padding: 12px 25px;
-        background-color: transparent;
-    }
-    &__list--reviews {
-        background-color: var(--color-creamy);
-    }
-    &__item {
-        margin-right: 26px;
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-    &__button {
-        display: block;
-        padding: 0;
-        width: 7px;
-        height: 7px;
-        border: 1px solid var(--color-gray);
-        background-color: transparent;
-        transform: rotate(45deg);
-        transform-origin: center;
-        cursor: pointer;
-    }
-    &__button--white {
-        border-color: var(--color-white);
-    }
-    &__button--active {
-        background-color: var(--color-gray);
-    }
-    &__button--white.slider-navigator__button--active {
-        background-color: var(--color-white);
-    }
-}
 .swiper-pagination-wrapper{
     position: absolute;
     bottom: 17px;
@@ -272,11 +219,17 @@ html {
         bottom: -60px;
     } 
 }
-.swiper-pagination-wrapper .swiper-pagination{
+.swiper-pagination-wrapper--advatages{
+    bottom: 3px;
+}
+.swiper-pagination-wrapper--advatages-without-swiper{
+    display: none;
+}
+.swiper-pagination{
     display: flex;   
     justify-content: space-between;
 }
-.swiper-pagination-wrapper .swiper-pagination-bullet{
+.swiper-pagination-bullet{
     display: block;
     padding: 0;
     width: 7px;
@@ -295,3 +248,13 @@ html {
         opacity: 1;
     }
 }
+.swiper-pagination-wrapper--advatages .swiper-pagination-bullet{
+    border: 1px solid var(--color-white);
+    &-active{
+        background-color: var(--color-white);
+    }
+}
+// .swiper-slide{
+//     max-width: 100%;
+//     width: 100%;
+// }

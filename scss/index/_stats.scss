@@ -86,13 +86,13 @@
             font-weight: 400;
             font-size: 20px;
             line-height: 27px;
-            color: rgba(#ffffff, 0.3);
+            color: var(--color-white);
             opacity: 0.3;
         }
         &__legend-explanation--top {
             padding: 0 34px;
             margin-top: 34px;
-            color: rgba(#000000, 0.3);
+            color: var(--color-black);
             @media (max-width: $width-tablet) {
                 margin-top: 24px;
                 line-height: 1;
