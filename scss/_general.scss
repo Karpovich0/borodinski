@@ -95,7 +95,14 @@ html {
 
 .button--dark {
     color: var(--color-white);
-    background-color: var(--color-dark-gray);
+    &:hover{
+        border-color: var(--color-gray-for-button-active);
+    }
+    &:active{
+        border-color: var(--color-gray-for-header);
+        color: rgba($color: #ffffff, $alpha: 0.3);
+        background-color: var(--color-gray-for-header);
+    }   
 }
 
 .button--footer {
@@ -115,6 +122,18 @@ html {
     @media (min-width: $width-pc-start) {
         margin-bottom: 87px;
     }
+    color: var(--color-white);
+    &:hover{
+        background-color: var(--color-brown);
+    }
+    &:active{       
+        color: rgba($color: #ffffff, $alpha: 0.3); 
+    }
+    &:disabled{        
+        background-color: var(--color-button-disabled);
+        color: var(--color-white);
+        cursor: auto;       
+    }  
 }
 
 .section-inner {

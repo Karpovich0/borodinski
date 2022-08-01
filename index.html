@@ -125,9 +125,9 @@
         <section class="advantages">
             <div class="advantages__inner container">
                 <h2 class="visually-hidden">Наши преимущества</h2>
-                <div class="swiper advantages__slider">
-                    <ul class="advantages__list swiper-wrapper">
-                        <li class="advantages__item swiper-slide">
+                <div class="advantages__slider">
+                    <ul class="advantages__list advantages__list--without-swiper">
+                        <li class="advantages__item advantages__item--without-swiper">
                             <div class="advantages__img-wrapper">
                                 <img src="/img/advantages/advantage-1-icon.svg" alt="" class="advantages__img" width="95" height="94">
                             </div>
@@ -136,7 +136,7 @@
                                 <p class="advantages__description">Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки</p>
                             </div>
                         </li>
-                        <li class="advantages__item swiper-slide">
+                        <li class="advantages__item advantages__item--without-swiper">
                             <div class="advantages__img-wrapper">
                                 <img src="/img/advantages/advantage-2-icon.svg" alt="" class="advantages__img" width="95" height="88">
                             </div>
@@ -145,7 +145,7 @@
                                 <p class="advantages__description">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино. Во всяком случае внешне.</p>
                             </div>
                         </li>
-                        <li class="advantages__item swiper-slide">
+                        <li class="advantages__item advantages__item--without-swiper">
                             <div class="advantages__img-wrapper">
                                 <img src="/img/advantages/advantage-3-icon.svg" alt="" class="advantages__img" width="95" height="91">
                             </div>
@@ -156,7 +156,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="swiper-pagination-wrapper swiper-pagination-wrapper--advatages">
+                <div class="swiper-pagination-wrapper swiper-pagination-wrapper--advatages swiper-pagination-wrapper--advatages-without-swiper">
                     <div class="advatages__pagination swiper-pagination"></div>
                 </div>
             </div>
@@ -275,21 +275,25 @@
                     <div class="footer__content">
                         <ul class="footer__list">
                             <li class="footer__item">
-                                <a href="" class="footer__button"><svg class="footer__svg-vkontakte" width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <a href="" class="footer__button">
+                                    <svg class="footer__svg-vkontakte" width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.7334 15.1476C14.5777 14.1554 15 13.0283 15 11.7661C15 9.65731 13.291 8.18402 10.8981 7.65262C11.9277 7.39511 12.7018 7.11184 13.2212 6.42675C13.7403 5.74166 13.9999 4.97504 13.9999 4.1282C13.9999 2.9656 13.5529 2.26258 12.659 1.35754C11.7649 0.452494 10.3427 0 8.39224 0H0V17H8.80485C11.5682 17.0001 12.889 16.1398 13.7334 15.1476ZM4.66665 3.36207H6.76663C8.03079 3.36207 8.6631 3.79467 8.6631 4.74113C8.6631 5.08981 8.52764 5.74569 8.25684 6.05278C7.98581 6.35999 7.5205 6.51356 6.86149 6.51356H4.66671V3.36207H4.66665ZM4.64214 13.214V10.1253H7.21591C8.04659 10.1253 8.61795 10.2894 8.92946 10.6172C9.2408 10.9453 9.39691 11.3042 9.39691 11.6945C9.39691 12.085 9.23642 12.4354 8.91603 12.7469C8.59523 13.0586 8.09163 13.214 7.40551 13.214H4.64214Z" fill="white"/>
-                                    </svg></a>
+                                    </svg>
+                                </a>
                             </li>
                             <li class="footer__item">
-                                <a href="" class="footer__button"><svg class="footer__svg-facebook" width="10" height="21" viewBox="0 0 10 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <a href="" class="footer__button">
+                                    <svg class="footer__svg-facebook" width="10" height="21" viewBox="0 0 10 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2.58822 21V11.8484H0V7.73147H2.6474V4.3246C2.6474 4.3246 2.76819 0.0333456 6.16387 0H9.94317V4.04007H7.59887C7.59887 4.04007 6.60905 4.04007 6.60905 5.24749C6.60905 6.45232 6.60905 7.80329 6.60905 7.80329H10L9.59271 11.9177H6.66823V21H2.58822Z" fill="white"/>
                                     </svg>
-                                    </a>
+                                </a>
                             </li>
                             <li class="footer__item">
-                                <a href="" class="footer__button"><svg class="footer__svg-instagram" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <a href="" class="footer__button">
+                                    <svg class="footer__svg-instagram" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M19 0H0V19H19V0ZM9.5 6.01667C11.4241 6.01667 12.9833 7.57657 12.9833 9.5C12.9833 11.4228 11.4241 12.9833 9.5 12.9833C7.57657 12.9833 6.01667 11.4228 6.01667 9.5C6.01667 7.57657 7.57657 6.01667 9.5 6.01667ZM16.4667 16.4667H2.53333V7.91667H4.02737C3.88233 8.41953 3.8 8.95027 3.8 9.5C3.8 12.6477 6.35297 15.2 9.5 15.2C12.6489 15.2 15.2 12.6477 15.2 9.5C15.2 8.95027 15.1177 8.41953 14.9726 7.91667H16.4667V16.4667ZM16.4667 3.17173V5.08187V5.7C16.4667 5.7 16.1836 5.69303 15.8435 5.69873V5.7H13.9333C13.5882 5.7 13.3 5.7 13.3 5.7V2.53333H15.8333L15.8435 2.53523C15.8435 2.53523 16.4667 2.5384 16.4667 2.53333C16.4667 2.53333 16.4654 3.16983 16.4654 3.17173H16.4667Z" fill="white"/>
                                     </svg>
-                                    </a>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -331,7 +335,8 @@
     
    
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="/js/script.js"></script>  
+    <script src="/js/script.js"></script>
+    <script src="js/swiper.js"></script>  
 </body>
 
 </html>

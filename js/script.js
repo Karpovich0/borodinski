@@ -15,10 +15,7 @@ const login = document.querySelector(".header__button");
 // const modal = document.querySelector(".modal");
 const modalWrapper = document.querySelector(".modal-wrapper");
 const modalButtonClose = document.querySelector(".modal__button-close");
-// create slider when width less than 769px variables
-const advantagesList = document.querySelector(".advantages__list");
-const advantagesItems = document.querySelectorAll(".advantages__item");
-const advantagesPaginationWrapper = document.querySelector(".swiper-pagination-wrapper--advatages");
+
 
 if (toggleButton) {
     toggleButton.addEventListener("click", function(e) {
@@ -68,63 +65,3 @@ function toggleLoginForm() {
     }
 }
 
-//Swiper fore reviews
-
-new Swiper(".reviews__slider",{
-    // arrows
-    navigation:{
-        nextEl:".reviews__button--forward",
-        prevEl:".reviews__button--back"
-    },
-    grabCursor:true,    
-    spaceBetween:20,
-    loop:true,
-    slidesPerView:1,     
-    pagination:{
-        el:".swiper-pagination--reviews",
-        clickable:true,   
-    }
-});
-
-//Swiper for advantages
-
-// breakpoint where swiper will be destroyed   
-const breakpoint = window.matchMedia( '(min-width:769px)' );
-
-// keep track of swiper instances to destroy later
-let advantagesSwiper;  
-
-const breakpointChecker = function() {
-    if ( breakpoint.matches === true ) {        
-        if ( advantagesSwiper !== undefined ) advantagesSwiper.destroy( true, true );
-        advantagesList.classList.add("advantages__list--without-swiper");
-        advantagesItems.forEach(item => item.classList.add("advantages__item--without-swiper")); 
-        advantagesPaginationWrapper.classList.add("swiper-pagination-wrapper--advatages-without-swiper");       
-    } else if ( breakpoint.matches === false ) {        
-        advantagesList.classList.remove("advantages__list--without-swiper");
-        advantagesItems.forEach(item => item.classList.remove("advantages__item--without-swiper"));
-        advantagesPaginationWrapper.classList.remove("swiper-pagination-wrapper--advatages-without-swiper");
-        return enableSwiper();      
-    }
-};
-    
-const enableSwiper = function() {
-    advantagesSwiper = new Swiper(".advantages__slider",{    
-    grabCursor:true,   
-    spaceBetween:20,
-    loop:true,
-    slidesPerView:1,   
-    pagination:{
-        el:".advatages__pagination",
-        clickable:true,   
-    }
-    });  
-};    
-    
-//listen for window resize event
-window.addEventListener('resize', function(event){          
-    breakpointChecker();
-});
-  
-// kickstart of swiper for advantages
-breakpointChecker();
