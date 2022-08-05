@@ -10,8 +10,6 @@
     }
 }
 
-.visually-hidden {}
-
 .reserve-form {
     &__personal-info {}
     &__fieldset {
@@ -80,11 +78,21 @@
         font-size: 18px;
         line-height: 30px;
         color: var(--color-black);
+        &:hover{
+            border-color: var(--color-gray-for-button);
+        }
+        &:focus{
+            outline: 4px solid rgba($color: #007DFA, $alpha: 0.6);
+        }
+        &:active{
+            border-color: #999999;
+        }
         @media (min-width: $width-tablet-start) {
             margin-bottom: 0;
             padding: 20px 25px;
             font-size: 24px;
         }
+        
     }
     &__textarea {
         resize: none;
@@ -136,7 +144,7 @@
             margin-bottom: 43px;
         }
     }
-    &__legend--checkbox {
+    &__legend--checkbox {        
         @media (min-width: $width-pc-start) {
             margin-bottom: 36px;
         }
@@ -184,6 +192,7 @@
         font-size: 18px;
         line-height: 24px;
         color: var(--color-black);
+        cursor: pointer;
         @media (min-width: $width-tablet-start) {
             margin-bottom: 29px;
             font-size: 24px;
@@ -238,6 +247,7 @@
         font-size: 18px;
         line-height: 24px;
         color: var(--color-black);
+        cursor: pointer;
         @media (min-width: $width-tablet-start) {
             padding-right: 35px;
             font-size: 24px;

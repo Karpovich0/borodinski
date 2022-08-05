@@ -2963,6 +2963,18 @@ html {
   color: var(--color-black);
 }
 
+.reserve-form__input:hover, .reserve-form__textarea:hover {
+  border-color: var(--color-gray-for-button);
+}
+
+.reserve-form__input:focus, .reserve-form__textarea:focus {
+  outline: 4px solid rgba(0, 125, 250, 0.6);
+}
+
+.reserve-form__input:active, .reserve-form__textarea:active {
+  border-color: #999999;
+}
+
 @media (min-width: 769px) {
   .reserve-form__input, .reserve-form__textarea {
     margin-bottom: 0;
@@ -3157,6 +3169,7 @@ html {
   font-size: 18px;
   line-height: 24px;
   color: var(--color-black);
+  cursor: pointer;
 }
 
 @media (min-width: 769px) {
@@ -3241,6 +3254,7 @@ html {
   font-size: 18px;
   line-height: 24px;
   color: var(--color-black);
+  cursor: pointer;
 }
 
 @media (min-width: 769px) {
